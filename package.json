@@ -1,26 +1,25 @@
 {
   "name": "poke-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
   "scripts": {
+    "lint": "eslint ./src",
     "start": "node src/index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "env-cmd": "^10.0.1",
-    "jest": "^25.1.0",
-    "nodemon": "^2.0.2",
-    "request": "^2.88.0"
   },
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.11",
     "pokedex-promise-v2": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "request": "^2.88.0"
   }
 }
