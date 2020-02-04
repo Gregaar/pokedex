@@ -4,19 +4,17 @@ const pokeSearch = async (name) => {
   try {
     const kantoPokemon = await Pokedex.getPokedexByName("kanto");
 
-    const pokeEntries = kantoPokemon["pokemon_entries"];
-
-    const pokeFind = pokeEntries.find((poke) => {
-      return name.toLowerCase() === poke.pokemon_species.name;
+    const monEntries = kantoPokemon["pokemon_entries"];
+    const monFind = monEntries.find((mon) => {
+      return name.toLowerCase() === mon.pokemon_species.name;
     });
 
-    if (!pokeFind) {
+    if (!monFind) {
       return `Unable to find ${name} in the Pokedex`;
     }
 
-    const pokeURL = pokeFind.pokemon_species.url;
-
-    return pokeURL;
+    const pokedexId = monFind.entry_number;
+    return pokedexId;
   } catch (error) {
     return "ERROR: Unable to connect to the Pokedex";
   }

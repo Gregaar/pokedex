@@ -1,16 +1,18 @@
-const getPokemonGeneralInfo = require("../services/get-poke-info");
-const pokeSearch = require("../services/get-poke-url");
+const pokeSearch = require("../services/get-pokemon-id");
+const config = require("config");
+const createPokemonSpeciesClient = require("../services/get-pokemon-species");
 
 const search = async (req, res) => {
   try {
-    const pokemonURL = await pokeSearch(req.query.pokemon);
+    const pokedexId = await pokeSearch(req.query.pokemon);
+    const pokemonInfoClient = createPokemonSpeciesClient(config.get("pokeapi.baseUrl"));
+    const info = await pokemonInfoClient(pokedexId);
 
-    getPokemonGeneralInfo(pokemonURL, (error, pokeData) => {
-      if (error) {
-        res.send(error);
-      }
-      res.send(pokeData);
-    });
+    if (!info) {
+      return "Unable to find Pokemon";
+    }
+
+    res.send(info);
   } catch (error) {
     res.status(400).send(error);
   }
