@@ -1,10 +1,10 @@
 const express = require("express");
-const config = require("config");
+const commonMiddleware = require("./middleware");
 const partyRouter = require("./routes/party");
 
 const app = express();
 
-app.use(express.json());
-app.use(partyRouter);
+app.use(commonMiddleware());
+app.use(partyRouter());
 
 module.exports = app;

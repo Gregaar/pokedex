@@ -8,11 +8,15 @@
     "test": "jest --watch --runInBand"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "config": "^3.2.5",
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
+    "helmet": "^3.21.2",
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.11",
+    "node-fetch": "^2.6.0",
     "pino": "^5.16.0",
     "pokedex-promise-v2": "^3.2.0"
   },
