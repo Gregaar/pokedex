@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+const connect = (url) =>
+  mongoose.connect(url, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  });
+
+module.exports = connect;

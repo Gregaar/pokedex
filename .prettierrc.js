@@ -1,3 +1,5 @@
 module.exports = {
-  printWidth: 120
+  printWidth: 120,
+  trailingComma: "all",
+  arrowParens: "always"
 };

@@ -1,16 +1,4 @@
-const express = require("express");
-require("./db/mongoose");
+const config = require("config");
+require("./db/mongoose")(config.get("mongo.url"));
 
-const partyRouter = require('./routers/party');
-
-const app = express();
-
-const port = process.env.PORT || 3000;
-
-app.use(express.json());
-app.use(partyRouter);
-
-
-app.listen(port, () => {
-  console.log(`Server is up on ${port}`);
-});
+require("./server");

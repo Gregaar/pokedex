@@ -24,7 +24,7 @@ const pokemonSchema = new mongoose.Schema({
   },
   sprites: {
     type: Object,
-  }
+  },
 });
 
 const Pokemon = mongoose.model("Pokemon", pokemonSchema);

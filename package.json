@@ -4,13 +4,16 @@
   "scripts": {
     "lint": "eslint ./src",
     "start": "node src/index.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
-    "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
+    "watch": "nodemon src/index.js | pino-pretty",
+    "test": "jest --watch --runInBand"
   },
   "dependencies": {
+    "config": "^3.2.5",
     "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.11",
+    "pino": "^5.16.0",
     "pokedex-promise-v2": "^3.2.0"
   },
   "devDependencies": {
@@ -19,6 +22,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
+    "pino-pretty": "^3.5.0",
     "prettier": "^1.19.1",
     "request": "^2.88.0"
   }

@@ -2,13 +2,10 @@ const request = require("request");
 
 const getPokemonGeneralInfo = (url, callback) => {
   request.get({ url, json: true }, (error, { body }) => {
-
     if (error) {
       callback("Unable to connect to Pokedex", undefined);
-
     } else if (body.error) {
       callback("Unable to find Pokemon", undefined);
-
     } else {
       callback(undefined, {
         name: body.name,
@@ -17,7 +14,7 @@ const getPokemonGeneralInfo = (url, callback) => {
         color: body.color.name,
         habitat: body.habitat.name,
         captureChance: body.capture_rate,
-        flavorText: body.flavor_text_entries[1].flavor_text
+        flavorText: body.flavor_text_entries[1].flavor_text,
       });
     }
   });
