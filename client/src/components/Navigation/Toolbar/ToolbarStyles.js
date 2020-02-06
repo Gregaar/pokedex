@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 
 const toolbarStyles = createUseStyles({
   Toolbar: {
-    opacity: '0.9',
+    opacity: "0.9",
     height: "75px",
     width: "100%",
     // position: "fixed",
@@ -15,7 +15,7 @@ const toolbarStyles = createUseStyles({
     padding: "0 20px",
     boxSizing: "border-box",
     zIndex: 90,
-    border: '2px solid #21a4f3',
+    border: "2px solid #21a4f3",
     "& nav": {
       height: "100%",
       listStyle: "none",

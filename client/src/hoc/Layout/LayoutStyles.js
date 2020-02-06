@@ -1,6 +1,5 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from "react-jss";
 
-const layoutStyles = createUseStyles({
-});
+const layoutStyles = createUseStyles({});
 
 export default layoutStyles;

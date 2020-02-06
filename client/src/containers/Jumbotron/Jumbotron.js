@@ -12,10 +12,10 @@ const Jumbotron = (props) => {
       await axios
         .get("/pokemon/card_images/")
         .then((res) => {
-          setImageState(res.data);
+          return setImageState(res.data);
         })
         .catch((error) => {
-          console.log(error);
+          console.log( error);
         });
     };
     fetchCards();
@@ -26,7 +26,11 @@ const Jumbotron = (props) => {
     const imagesCopy = [...imageState];
     const shuffledImages = shuffle(imagesCopy);
     images = shuffledImages.map((img) => (
-      <Image key={img._id} src={btoa(String.fromCharCode.apply(null, img.image.data.data))} alt={`An image on a Pokemon card`}/>
+      <Image
+        key={img._id}
+        src={btoa(String.fromCharCode.apply(null, img.image.data.data))}
+        alt={`An image of a Pokemon card`}
+      />
     ));
   } else {
     return <div>Loading...</div>;

@@ -2,7 +2,7 @@
   "name": "poke-project",
   "version": "0.0.0",
   "scripts": {
-    "lint": "eslint ./src",
+    "lint": "eslint ./index",
     "start": "node src/index.js",
     "watch": "nodemon src/index.js | pino-pretty",
     "test": "jest --watch --runInBand"

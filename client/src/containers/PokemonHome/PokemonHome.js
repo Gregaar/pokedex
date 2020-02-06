@@ -1,13 +1,12 @@
 import React from "react";
-import Layout from '../../hoc/Layout/Layout';
-import Jumbotron from '../Jumbotron/Jumbotron';
+import Layout from "../../hoc/Layout/Layout";
+import Jumbotron from "../Jumbotron/Jumbotron";
 
-const pokemonHome = props => {
-
+const pokemonHome = (props) => {
   return (
     <Layout>
-      <Jumbotron/>
-      </Layout>
+      <Jumbotron />
+    </Layout>
   );
 };
 

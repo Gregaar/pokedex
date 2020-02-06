@@ -1,7 +1,7 @@
 import React from "react";
 
 import NavigationItems from "../NavigationItems/NavigationItems";
-import toolbarStyles from './ToolbarStyles';
+import toolbarStyles from "./ToolbarStyles";
 
 const toolbar = (props) => {
   const classes = toolbarStyles();

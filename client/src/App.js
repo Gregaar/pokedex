@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-        <Route path="/" exact component={PokemonHome} />
+      <Route path="/" exact component={PokemonHome} />
     </div>
   );
 }
