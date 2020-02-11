@@ -8,4 +8,7 @@ module.exports = {
   pokeapi: {
     baseUrl: "https://pokeapi.co/api/v2",
   },
+  JWT_SECRET: {
+    signature: "B87r4ifVYt4oOqOv",
+  },
 };

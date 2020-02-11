@@ -2,12 +2,13 @@
   "name": "poke-project",
   "version": "0.0.0",
   "scripts": {
-    "lint": "eslint ./index",
+    "lint": "eslint ./src",
     "start": "node src/index.js",
     "watch": "nodemon src/index.js | pino-pretty",
     "test": "jest --watch --runInBand"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "config": "^3.2.5",
@@ -15,13 +16,15 @@
     "express-pino-logger": "^4.0.0",
     "helmet": "^3.21.2",
     "jest": "^24.9.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.11",
     "multer": "^1.4.2",
     "node-fetch": "^2.6.0",
     "pino": "^5.16.0",
     "pokedex-promise-v2": "^3.2.0",
-    "sharp": "^0.24.0"
+    "sharp": "^0.24.0",
+    "validator": "^12.2.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

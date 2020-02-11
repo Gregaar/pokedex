@@ -1,0 +1,12 @@
+Goals for 11th of Februray
+
+1. Setup isAuthenticated prop to be passed around once a user has been signed in properly.
+    -- Change toolbar Login navigation item to Logout
+    -- Enable access to other routes
+    -- Assign token to local storage.
+
+2. Setup emailing upon account creation with SendGrid
+
+3. Pull images from https://imgur.com/gallery/ksnRO and store in database.
+    -- Render all of these images on /cardlist
+    -- Create a scroll-loading function for this. Start with display of maybe 9 cards, and on scrolling load another 9.

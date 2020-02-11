@@ -9,27 +9,23 @@ const navStyles = createUseStyles({
     flexFlow: "column",
     alignItems: "center",
     height: "100%",
-    "& h1": {
-      fontFamily: "PokemonHollow",
-      fontSize: "1.5rem",
-      color: "blue",
-      paddingRight: "15px",
-    },
-    "& h2": {
-      fontFamily: "PokemonHollow",
-      fontSize: "1.5rem",
-      color: "blue",
-    },
   },
   Pokemon: {
     display: "inline-block",
-    width: "275px",
-    margin: "0 1.5rem",
-    fontSize: "2rem",
-  },
-  Generation: {
-    display: "inline-block",
-    width: "170px",
+    width: "430px",
+    margin: "0 1rem",
+    fontFamily: "PokemonHollow",
+    fontSize: "1.4rem",
+    fontWeight: "bolder",
+    "& a": {
+      color: "#2a75bb",
+      textDecoration: "none",
+      boxSizing: "border-box",
+      display: "block",
+      "&:hover, &:active, &.active ": {
+        color: "#2a75bb",
+      },
+    },
   },
   "@media (min-width: 500px)": {
     NavigationItems: {

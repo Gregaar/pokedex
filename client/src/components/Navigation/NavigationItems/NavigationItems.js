@@ -13,19 +13,16 @@ const navigationItems = (props) => {
       <NavigationItem exact link="/rules">
         Rules
       </NavigationItem>
-      <li>
-        <h1 className={classes.Pokemon}>Pokemon Dream Team</h1>
-      </li>
-      <li>
-        <h2 className={classes.Generation}>Generation I</h2>
-      </li>
+      <NavigationItem style={classes.Pokemon} exact link="/">
+        Pokemon Dream Team: Generation I
+      </NavigationItem>
       <NavigationItem exact link="/support">
         Support
       </NavigationItem>
       <NavigationItem exact link="/login">
         Login
       </NavigationItem>
-      <NavigationItem exact link="/sign-up">
+      <NavigationItem exact link="/signup">
         Sign up
       </NavigationItem>
     </ul>
