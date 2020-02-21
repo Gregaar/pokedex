@@ -5,9 +5,11 @@ import buttonStyles from "./ButtonStyles";
 const button = (props) => {
   const classes = buttonStyles();
 
+  const style = props.style ? props.style : classes.Button;
+
   return (
     <div>
-      <button disabled={props.invalid} className={classes.Button}>
+      <button onClick={props.clicked} className={style}>
         {props.children}
       </button>
     </div>

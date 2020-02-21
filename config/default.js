@@ -10,5 +10,6 @@ module.exports = {
   },
   JWT_SECRET: {
     signature: "B87r4ifVYt4oOqOv",
+    refresh: "amke8fd7k2jsl6q7mqtk938ckcalat45kepdmnh8p39q9x0dm7v02mdzd6ajznwo",
   },
 };

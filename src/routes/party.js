@@ -5,7 +5,7 @@ const { logger } = require("../logger");
 
 const router = new Router();
 
-router.get("/pokedex/search", pokedexController.search);
+router.get("/cardlist/:id", pokedexController.search);
 
 module.exports = () => {
   logger.info("Registering 'party' routes...");

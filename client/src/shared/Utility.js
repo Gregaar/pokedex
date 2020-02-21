@@ -30,3 +30,11 @@ export const updateObject = (oldObject, updatedProps) => {
     ...updatedProps,
   };
 };
+
+
+export const updateArray = (oldArray, updatedProps) => {
+  return [
+    ...oldArray,
+    ...updatedProps,
+];
+};

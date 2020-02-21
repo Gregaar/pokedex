@@ -1,22 +1,42 @@
 import React from "react";
-import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
+import { useAuth0 } from "./react-auth0-spa";
+import history from "./shared/history";
+import PrivateRoute from "./hoc/Private-Route/Private-Route";
 
 import Layout from "./hoc/Layout/Layout";
-import PokemonHome from "./containers/PokemonHome/PokemonHome";
-import Auth from "./containers/Auth/Auth";
+import PokemonHome from "./components/PokemonHome/PokemonHome";
+import CardList from "./containers/CardList/CardList";
+import Profile from "./components/Profile/Profile";
+import IndividualCard from "./containers/IndividualCard/IndividualCard";
 import "./App.css";
 
 function App() {
-  let routes = (
-    <Switch>
-      <Route path="/signup" exact page={"signup"} component={(props) => <Auth page={"signup"} {...props} />} />
-      <Route path="/login" exact component={(props) => <Auth page={"login"} {...props} />} />
-      <Route path="/" exact component={PokemonHome} />
-    </Switch>
+  const { loading } = useAuth0();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  let routes = null;
+
+  routes = (
+      <Switch>
+        <Route path="/" exact component={PokemonHome} />
+        <Route path="/cardlist" exact component={CardList}/>
+        <Route path="/cardlist/:id" exact component={IndividualCard}/>
+        <PrivateRoute path="/profile" component={Profile} />
+      </Switch>
+    
   );
+
   return (
-    <div>
-      <Layout>{routes}</Layout>
+    <div className="App">
+      <Router history={history}>
+      <Layout>
+        {routes}
+      </Layout>
+      </Router>
     </div>
   );
 }

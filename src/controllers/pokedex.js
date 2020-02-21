@@ -1,20 +1,22 @@
-const pokeSearch = require("../services/get-pokemon-id");
 const config = require("config");
 const createPokemonSpeciesClient = require("../services/get-pokemon-species");
 
 const search = async (req, res) => {
-  try {
-    const pokedexId = await pokeSearch(req.query.pokemon);
-    const pokemonInfoClient = createPokemonSpeciesClient(config.get("pokeapi.baseUrl"));
-    const info = await pokemonInfoClient(pokedexId);
+  if (req.params.id > 151 || req.params.id < 1) {
+    res.status(400).send();
+  } else {
+    try {
+      const pokemonInfoClient = createPokemonSpeciesClient(config.get("pokeapi.baseUrl"));
+      const info = await pokemonInfoClient(req.params.id);
 
-    if (!info) {
-      return "Unable to find Pokemon";
+      if (!info) {
+        return "Unable to find Pokemon";
+      }
+
+      res.send(info);
+    } catch (error) {
+      res.status(400).send(error);
     }
-
-    res.send(info);
-  } catch (error) {
-    res.status(400).send(error);
   }
 };
 

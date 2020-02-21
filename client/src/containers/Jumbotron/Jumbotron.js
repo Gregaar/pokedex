@@ -15,7 +15,7 @@ const Jumbotron = (props) => {
           return setImageState(res.data);
         })
         .catch((error) => {
-          console.log(error);
+          return error;
         });
     };
     fetchCards();

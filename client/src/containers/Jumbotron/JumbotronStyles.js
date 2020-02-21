@@ -7,7 +7,6 @@ const jumbotronStyles = createUseStyles({
     background: `url(${Background})`,
     backgroundSize: "contain",
     display: "inline-grid",
-    // marginTop: '50px',
     gridTemplateAreas: `". card card card ."
                         ". card card card ."   
     `,
