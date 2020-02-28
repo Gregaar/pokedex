@@ -7,6 +7,7 @@ const paginatedResults = (model) => {
     const endIndex = page * limit;
 
     const results = {};
+
     if (endIndex < (await model.countDocuments().exec()))
       results.next = {
         page: page + 1,
@@ -18,10 +19,11 @@ const paginatedResults = (model) => {
         limit: limit,
       };
     }
-    // const findAll = await model.find({});
+
     try {
       results.results = await model
-        .find()
+        .find({})
+        .sort({ pokedexEntry: 1 })
         .limit(limit)
         .skip(startIndex)
         .exec();

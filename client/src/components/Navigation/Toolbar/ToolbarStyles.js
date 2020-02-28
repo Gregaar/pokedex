@@ -5,7 +5,6 @@ const toolbarStyles = createUseStyles({
     opacity: "0.9",
     height: "75px",
     width: "100%",
-    // position: "fixed",
     top: 0,
     left: 0,
     backgroundColor: "#ffcd1e",
@@ -19,6 +18,22 @@ const toolbarStyles = createUseStyles({
     "& nav": {
       height: "100%",
       listStyle: "none",
+    },
+  },
+  Logo: {
+    margin: "auto",
+    height: "80%",
+  },
+  "@media (max-width: 499px)": {
+    Toolbar: {
+      "& nav": {
+        display: "none",
+      },
+    },
+  },
+  "@media (min-width: 499px)": {
+    Logo: {
+      display: "none",
     },
   },
 });

@@ -1,12 +1,14 @@
 const imgur = require("imgur");
-const ImgurCards = require("../models/imgur-cards");
+const PokemonCards = require("../models/pokemon-cards");
+const PersonalCards = require("../models/personal-cards");
 
 const pokemonCardsAlbum = "CERezES";
+const personalCardsAlbum = "MfB0XCU";
 
-const getAlbum = async () => {
+const getAlbum = async (album) => {
   let pokeArray = [];
   await imgur
-    .getAlbumInfo(pokemonCardsAlbum)
+    .getAlbumInfo(album)
     .then((res) => {
       return (pokeArray = res.data.images);
     })
@@ -16,15 +18,33 @@ const getAlbum = async () => {
   return pokeArray;
 };
 
-const saveImgurIds = async (req, res) => {
+const savePokemonImgurIds = async () => {
   try {
-    const images = await getAlbum();
-    images.forEach(async (image) => {
-      const imgurCard = new ImgurCards({ imageId: image.id, pokedexEntry: +image.description });
-      await imgurCard.save();
+    const checkCollection = await PokemonCards.find();
+    if (checkCollection.length !== 0) {
       return;
+    }
+    const images = await getAlbum(pokemonCardsAlbum);
+    images.forEach(async (image) => {
+      const imgurCard = new PokemonCards({ imageId: image.id, pokedexEntry: +image.description });
+      await imgurCard.save();
     });
-    res.send();
+  } catch (error) {
+    return error;
+  }
+};
+
+const savePersonalImgurIds = async () => {
+  try {
+    const checkCollection = await PokemonCards.find();
+    if (checkCollection.length !== 0) {
+      return;
+    }
+    const images = await getAlbum(personalCardsAlbum);
+    images.forEach(async (image) => {
+      const imgurCard = new PersonalCards({ imageId: image.id, pokedexEntry: +image.description });
+      await imgurCard.save();
+    });
   } catch (error) {
     return error;
   }
@@ -35,7 +55,7 @@ const getOneCardImage = async (req, res) => {
     res.status(400).send();
   } else {
     try {
-      const findCard = await ImgurCards.findOne({ pokedexEntry: req.params.id });
+      const findCard = await PokemonCards.findOne({ pokedexEntry: req.params.id });
       res.send(findCard.imageId);
     } catch (error) {
       res.status(400).send(error);
@@ -44,11 +64,7 @@ const getOneCardImage = async (req, res) => {
 };
 
 module.exports = {
-  saveImgurIds,
+  savePokemonImgurIds,
+  savePersonalImgurIds,
   getOneCardImage,
 };
-
-// Find a way to link the Poke API and the images.
-// When clicking on a card, it will take you to for example /card/:id
-// Here, it will display information about the Pokemon fed from the API
-// implement pagination, show e.g. 10 cards per page.

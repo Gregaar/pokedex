@@ -8,14 +8,11 @@ const footer = (props) => {
 
   return (
     <footer className={classes.Footer}>
-      <NavigationItem exact link="/privacy">
-        Privacy
-      </NavigationItem>
       <NavigationItem exact link="/about">
         About
       </NavigationItem>
-      <NavigationItem exact link="/cookies">
-        Cookies
+      <NavigationItem exact link="/contact">
+        Contact
       </NavigationItem>
     </footer>
   );

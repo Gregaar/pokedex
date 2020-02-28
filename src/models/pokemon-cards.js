@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const imgurCardsSchema = new mongoose.Schema(
+const pokemonCardsSchema = new mongoose.Schema(
   {
     imageId: {
       type: String,
@@ -16,6 +16,6 @@ const imgurCardsSchema = new mongoose.Schema(
   },
 );
 
-const ImgurCards = mongoose.model("ImgurCards", imgurCardsSchema);
+const PokemonCards = mongoose.model("PokemonCards", pokemonCardsSchema);
 
-module.exports = ImgurCards;
+module.exports = PokemonCards;

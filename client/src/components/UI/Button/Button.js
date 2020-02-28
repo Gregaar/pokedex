@@ -8,11 +8,9 @@ const button = (props) => {
   const style = props.style ? props.style : classes.Button;
 
   return (
-    <div>
       <button onClick={props.clicked} className={style}>
         {props.children}
       </button>
-    </div>
   );
 };
 

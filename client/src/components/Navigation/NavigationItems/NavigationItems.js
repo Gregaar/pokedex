@@ -1,38 +1,45 @@
 import React from "react";
 import navStyles from "./NavigationItemsStyles";
-import Button from "../../UI/Button/Button";
+import navItemStyles from "./NavigationItem/NavigationItemStyles";
 import NavigationItem from "./NavigationItem/NavigationItem";
 
 const navigationItems = (props) => {
   const classes = navStyles();
+  const navItemClasses = navItemStyles();
 
   const loggedIn = props.auth ? (
-    <React.Fragment>
-      <NavigationItem exact link="/profile">
-        Profile
-      </NavigationItem>
-      <Button style={classes.Auth} clicked={() => props.logout({})}>Logout</Button>
-    </React.Fragment>
+    <li className={navItemClasses.NavigationItem}>
+      <a onClick={() => props.logout({})}>Logout</a>
+    </li>
   ) : (
-    <Button style={classes.Auth} clicked={() => props.login({})}>Log in</Button>
+    <li className={navItemClasses.NavigationItem}>
+      <a onClick={() => props.login({})}>Login</a>
+    </li>
   );
+
   return (
     <ul className={classes.NavigationItems}>
-      <NavigationItem exact link="/cardlist">
-        Card List
+      {props.auth ? (
+      <React.Fragment>
+      <NavigationItem exact link="/">
+        Home
       </NavigationItem>
-      <NavigationItem exact link="/rules">
-        Rules
-      </NavigationItem>
-      <NavigationItem style={classes.Pokemon} exact link="/">
-        Pokemon Dream Team: Generation I
-      </NavigationItem>
-      <NavigationItem exact link="/support">
-        Support
-      </NavigationItem>
+          <NavigationItem exact link="/cardlist">
+            Card List
+          </NavigationItem>
+          <NavigationItem exact link="/favorites">
+            Favorites
+          </NavigationItem>
+          <NavigationItem exact link="/profile">
+            Profile
+          </NavigationItem>
+        </React.Fragment>
+      ) : <NavigationItem exact link="/">
+      Home
+    </NavigationItem>}
       {loggedIn}
     </ul>
   );
 };
 
-export default navigationItems;
+export default React.memo(navigationItems);
