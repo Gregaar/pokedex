@@ -31,13 +31,13 @@ const aboutStyles = createUseStyles({
   /* ----------- Non-Retina Screens ----------- */
   "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
     Container: {
-      height: "100vh"
+      height: "100vh",
     },
   },
-   /* ----------- Retina Screens ----------- */
-   "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
+  /* ----------- Retina Screens ----------- */
+  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
     Container: {
-      height: "100vh"
+      height: "100vh",
     },
   },
   /* ----------- Galaxy S9/S9+ ----------- */
@@ -132,8 +132,8 @@ const aboutStyles = createUseStyles({
       },
     },
   },
-   /* Landscape */
-   "@media only screen and (height: 375px) and (width: 667px) and (-webkit-max-device-pixel-ratio: 2)": {
+  /* Landscape */
+  "@media only screen and (height: 375px) and (width: 667px) and (-webkit-max-device-pixel-ratio: 2)": {
     Container: {
       height: "100%",
     },
@@ -173,7 +173,7 @@ const aboutStyles = createUseStyles({
   },
   /* ----------- iPhone X ----------- */
   /* Portrait */
-"@media only screen and (width: 375px) and (height: 812px) and (-webkit-max-device-pixel-ratio: 3)": {
+  "@media only screen and (width: 375px) and (height: 812px) and (-webkit-max-device-pixel-ratio: 3)": {
     Container: {
       height: "100vh",
     },

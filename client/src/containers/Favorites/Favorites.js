@@ -39,10 +39,7 @@ const Favorites = (props) => {
         });
     };
     getFavorites();
-    return () => {
-      setFavorites([]);
-      setShowButton("none")
-    }
+    return () => setFavorites([]);
   }, [getTokenSilently, props.history]);
 
   const scrollFunction = () => {
@@ -81,10 +78,10 @@ const Favorites = (props) => {
   return (
     <React.Fragment>
       <div>
-      {showFavorites}{" "}
-      <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
-        ^
-      </button>
+        {showFavorites}{" "}
+        <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
+          ^
+        </button>
       </div>
     </React.Fragment>
   );

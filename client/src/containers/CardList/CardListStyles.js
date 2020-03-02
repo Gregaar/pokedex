@@ -175,7 +175,7 @@ const cardListStyles = createUseStyles({
     },
   },
   /* Landscape */
-  "@media only screen and (height: 375px) and (width: 667px) and (-webkit-min-device-pixel-ratio: 2)": { 
+  "@media only screen and (height: 375px) and (width: 667px) and (-webkit-min-device-pixel-ratio: 2)": {
     CardGrid: {
       "& form": {
         width: "45%",

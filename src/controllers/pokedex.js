@@ -3,7 +3,7 @@ const createPokemonSpeciesClient = require("../services/get-pokemon-species");
 const pokeSearch = require("../services/get-pokemon-id");
 const FavoritePokemon = require("../models/favorite-pokemon");
 
-const search = async (req, res) => {
+const getPokemonInfo = async (req, res) => {
   if (req.params.id > 151 || req.params.id < 1) {
     res.status(400).send();
   } else {
@@ -15,7 +15,7 @@ const search = async (req, res) => {
         return "Unable to find Pokemon";
       }
 
-      res.status(200).send(info);
+      res.send(info);
     } catch (error) {
       res.status(400).send(error);
     }
@@ -28,7 +28,7 @@ const findPokemonByName = async (req, res) => {
     if (!pokemonId) {
       return "Unable to find Pokemon";
     }
-    res.status(200).send(pokemonId);
+    res.send(pokemonId);
   } catch (error) {
     res.status(400).send(error);
   }
@@ -43,7 +43,7 @@ const saveFavoritePokemon = async (req, res) => {
     } else {
       const pokemonToSave = new FavoritePokemon({ userId, pokemonId: req.body.pokemonId });
       if (!pokemonToSave) {
-        res.status(400).send("Unable to save to favorites.");
+        res.status(500).send("Unable to save to favorites.");
       }
       await pokemonToSave.save();
       res.send();
@@ -58,7 +58,7 @@ const getAllFavoritePokemon = async (req, res) => {
     const userId = req.user.sub.split("|")[1];
     const getSavedPokemon = await FavoritePokemon.find({ userId });
     if (!getSavedPokemon) {
-      res.status(400).send("No favorites found");
+      res.status(404).send("No favorites found");
     }
     return res.send(getSavedPokemon);
   } catch (error) {
@@ -71,12 +71,12 @@ const getOneFavoritePokemon = async (req, res) => {
     const userId = req.user.sub.split("|")[1];
     const getOnePokemon = await FavoritePokemon.findOne({ userId, pokemonId: req.body.pokemonId });
     if (!getOnePokemon) {
-      res.status(404).send("false");
+      res.status(404).send();
     } else {
       res.send("true");
     }
   } catch (error) {
-    res.status(400).send("false");
+    res.status(400).send();
   }
 };
 
@@ -94,7 +94,7 @@ const deleteFavoritePokemon = async (req, res) => {
 };
 
 module.exports = {
-  search,
+  getPokemonInfo,
   findPokemonByName,
   saveFavoritePokemon,
   getAllFavoritePokemon,

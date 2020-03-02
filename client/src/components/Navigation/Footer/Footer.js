@@ -3,7 +3,7 @@ import React from "react";
 import NavigationItem from "../NavigationItems/NavigationItem/NavigationItem";
 import footerStyles from "./FooterStyles";
 
-const footer = (props) => {
+const footer = () => {
   const classes = footerStyles();
 
   return (

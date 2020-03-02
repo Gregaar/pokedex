@@ -13,7 +13,7 @@ const navStyles = createUseStyles({
       cursor: "pointer",
     },
   },
-   "@media (max-width: 500px)": {
+  "@media (max-width: 500px)": {
     NavigationItems: {
       flexFlow: "column",
     },

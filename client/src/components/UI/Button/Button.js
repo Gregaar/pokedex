@@ -8,9 +8,9 @@ const button = (props) => {
   const style = props.style ? props.style : classes.Button;
 
   return (
-      <button onClick={props.clicked} className={style}>
-        {props.children}
-      </button>
+    <button onClick={props.clicked} className={style}>
+      {props.children}
+    </button>
   );
 };
 

@@ -8,7 +8,7 @@ const router = new Router();
 
 router.get("/cardlist", checkJwt, pokedexController.findPokemonByName);
 
-router.get("/cardlist/:id", checkJwt, pokedexController.search);
+router.get("/cardlist/:id", checkJwt, pokedexController.getPokemonInfo);
 
 router.post("/user/favorite", checkJwt, pokedexController.saveFavoritePokemon);
 

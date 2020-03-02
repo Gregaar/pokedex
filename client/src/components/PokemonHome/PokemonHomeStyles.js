@@ -22,7 +22,7 @@ const pokemonHomeStyles = createUseStyles({
     },
   },
 
-   /* ----------- Galaxy S9/S9+ ----------- */
+  /* ----------- Galaxy S9/S9+ ----------- */
   /* Portrait */
   "@media screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 4)": {
     Info: {
@@ -38,8 +38,8 @@ const pokemonHomeStyles = createUseStyles({
       },
     },
   },
-   /* Landscape */
-   "@media screen and (height: 360px) and (width: 740px) and (-webkit-device-pixel-ratio: 4)": {
+  /* Landscape */
+  "@media screen and (height: 360px) and (width: 740px) and (-webkit-device-pixel-ratio: 4)": {
     Info: {
       width: "90%",
       padding: "0 1%",
@@ -114,8 +114,8 @@ const pokemonHomeStyles = createUseStyles({
       },
     },
   },
-   /* Landscape */
-   "@media only screen and (height: 320px) and (width: 568px) and (-webkit-min-device-pixel-ratio: 2)": {
+  /* Landscape */
+  "@media only screen and (height: 320px) and (width: 568px) and (-webkit-min-device-pixel-ratio: 2)": {
     Info: {
       width: "91%",
       padding: "0 1%",

@@ -60,7 +60,7 @@ const navItemStyles = createUseStyles({
       lineHeight: "50px",
     },
   },
-   /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
   /* Portrait */
   "@media only screen and (width: 414px) and (height: 736px) and (-webkit-min-device-pixel-ratio: 3)": {
     NavigationItem: {

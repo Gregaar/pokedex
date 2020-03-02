@@ -7,6 +7,9 @@
     "watch": "nodemon src/index.js | pino-pretty",
     "test": "jest --watch --runInBand"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",

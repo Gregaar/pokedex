@@ -17,8 +17,8 @@ const sharedStyles = createUseStyles({
     "&:hover": {
       backgroundColor: "rgba(255, 205, 30, 1)",
       border: "1px solid #21a4f3",
-      color: "black"
-    }
+      color: "black",
+    },
   },
 });
 

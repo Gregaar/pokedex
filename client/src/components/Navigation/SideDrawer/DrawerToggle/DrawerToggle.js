@@ -4,7 +4,7 @@ import drawerToggleStyles from "./DrawerToggleStyles";
 
 const drawerToggle = (props) => {
   const classes = drawerToggleStyles();
-  
+
   return (
     <div className={classes.DrawerToggle} onClick={props.clicked}>
       <div></div>

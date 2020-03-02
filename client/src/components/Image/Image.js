@@ -4,7 +4,7 @@ import imageStyles from "./ImageStyles";
 const image = (props) => {
   const classes = imageStyles();
 
-  const style = props.style ? classes.Individual : classes.CardList
+  const style = props.style ? classes.Individual : classes.CardList;
 
   const cardUrl = `https://i.imgur.com/${props.imageId}.jpg`;
 

@@ -9,21 +9,25 @@ const navigationItems = (props) => {
 
   const loggedIn = props.auth ? (
     <li className={navItemClasses.NavigationItem}>
-      <a onClick={() => props.logout({})}>Logout</a>
+      <a href="#logout" onClick={() => props.logout({})}>
+        Logout
+      </a>
     </li>
   ) : (
     <li className={navItemClasses.NavigationItem}>
-      <a onClick={() => props.login({})}>Login</a>
+      <a href="#login" onClick={() => props.login({})}>
+        Login
+      </a>
     </li>
   );
 
   return (
     <ul className={classes.NavigationItems}>
       {props.auth ? (
-      <React.Fragment>
-      <NavigationItem exact link="/">
-        Home
-      </NavigationItem>
+        <React.Fragment>
+          <NavigationItem exact link="/">
+            Home
+          </NavigationItem>
           <NavigationItem exact link="/cardlist">
             Card List
           </NavigationItem>
@@ -34,9 +38,11 @@ const navigationItems = (props) => {
             Profile
           </NavigationItem>
         </React.Fragment>
-      ) : <NavigationItem exact link="/">
-      Home
-    </NavigationItem>}
+      ) : (
+        <NavigationItem exact link="/">
+          Home
+        </NavigationItem>
+      )}
       {loggedIn}
     </ul>
   );

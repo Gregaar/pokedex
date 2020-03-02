@@ -13,13 +13,26 @@ import IndividualCard from "./containers/IndividualCard/IndividualCard";
 import Favorites from "./containers/Favorites/Favorites";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import ClockLoader from "react-spinners/ClockLoader";
 import "./App.css";
 
 function App() {
   const { isAuthenticated, loading } = useAuth0();
 
   if (loading) {
-    return <div style={{backgroundColor: "#ffcd1e", height: "100vh"}}></div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#ffcd1e",
+          height: "100vh",
+        }}
+      >
+        <ClockLoader color={"#2a75bb"} />
+      </div>
+    );
   }
 
   let routes = null;

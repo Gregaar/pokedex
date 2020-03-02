@@ -14,13 +14,24 @@ const Layout = (props) => {
   };
 
   const sideDrawerToggleHandler = () => {
-    setShowSideDrawer(!showSideDrawer)
+    setShowSideDrawer(!showSideDrawer);
   };
 
   return (
     <React.Fragment>
-      <Toolbar auth={isAuthenticated} login={loginWithRedirect} logout={logout} toggleClicked={sideDrawerToggleHandler}/>
-      <SideDrawer auth={isAuthenticated} login={loginWithRedirect} logout={logout} closed={sideDrawerClosedHandler} open={showSideDrawer} />
+      <Toolbar
+        auth={isAuthenticated}
+        login={loginWithRedirect}
+        logout={logout}
+        toggleClicked={sideDrawerToggleHandler}
+      />
+      <SideDrawer
+        auth={isAuthenticated}
+        login={loginWithRedirect}
+        logout={logout}
+        closed={sideDrawerClosedHandler}
+        open={showSideDrawer}
+      />
       {props.children}
       <Footer />
     </React.Fragment>
