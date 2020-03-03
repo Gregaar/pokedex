@@ -30,7 +30,7 @@ const CardList = (props) => {
       return props.history.push("/");
     }
     const pokemonId = await axios
-      .get(`/cardlist?search=${event.target[0].value}`, {
+      .get(`/card?search=${event.target[0].value}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

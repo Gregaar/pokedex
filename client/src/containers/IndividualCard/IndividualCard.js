@@ -139,7 +139,7 @@ const IndividualCard = (props) => {
         props.history.push("/");
       }
       await axios
-        .get(`/cardlist/${urlId}`, {
+        .get(`/card/${urlId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
