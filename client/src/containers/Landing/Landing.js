@@ -21,6 +21,7 @@ const Landing = () => {
       await axios
         .get(`/images/personalcards?page=${page}&limit=12`)
         .then((res) => {
+          console.log(res)
           return setImageState(updateArray(imageState, res.data.results));
         })
         .catch((error) => {
