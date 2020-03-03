@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const path = require("path");
 const pokedexController = require("../controllers/pokedex");
 const checkJwt = require("../middleware/auth");
 
@@ -19,6 +20,10 @@ router.get("/user/favorites", checkJwt, pokedexController.getAllFavoritePokemon)
 router.get("/user/favorites/count", checkJwt, pokedexController.getFavoritePokemonCount);
 
 router.post("/user/favorites", checkJwt, pokedexController.getOneFavoritePokemon);
+
+router.use("*", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "../../client/build"));
+});
 
 module.exports = () => {
   logger.info("Registering 'party' routes...");
