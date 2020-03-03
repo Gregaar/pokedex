@@ -5,7 +5,7 @@ import Background from "../../assets/background.jpg";
 const aboutStyles = createUseStyles({
   Container: {
     width: "100%",
-    height: "78vh",
+    height: "100vh",
     paddingTop: "1%",
     paddingBottom: "2.5%",
     background: `url(${Background})`,

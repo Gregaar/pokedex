@@ -4,7 +4,7 @@ import Background from "../../assets/background.jpg";
 const favoriteStyles = createUseStyles({
   Container: {
     width: "100%",
-    height: "100%",
+    height: "100vh",
     paddingTop: "1%",
     background: `url(${Background})`,
   },

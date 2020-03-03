@@ -5,6 +5,7 @@ const pokemonHomeStyles = createUseStyles({
   Container: {
     textAlign: "center",
     width: "100%",
+    height: "100vh",
     background: `url(${Background})`,
     paddingTop: "1%",
   },
