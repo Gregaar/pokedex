@@ -8,7 +8,9 @@ const getPokemonInfo = async (req, res) => {
     res.status(400).send();
   } else {
     try {
-      const pokemonInfoClient = createPokemonSpeciesClient(config.get("pokeapi.baseUrl"));
+      const pokemonInfoClient = createPokemonSpeciesClient(
+        process.env.pokeapi.baseUrl || config.get("pokeapi.baseUrl"),
+      );
       const info = await pokemonInfoClient(req.params.id);
 
       if (!info) {
