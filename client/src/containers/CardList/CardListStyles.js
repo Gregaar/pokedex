@@ -4,7 +4,7 @@ import Background from "../../assets/background.jpg";
 const cardListStyles = createUseStyles({
   Container: {
     width: "100%",
-    height: "100vh",
+    height: "100%",
     background: `url(${Background})`,
     display: "inline-grid",
     gridTemplateAreas: `". card . card . card ." `,
