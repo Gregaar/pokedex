@@ -4,7 +4,7 @@ const jwksRsa = require("jwks-rsa");
 // Set up Auth0 configuration
 const authConfig = {
   domain: "pokemondreamteam.eu.auth0.com",
-  audience: "https://g-pokedex.herokuapp.com/",
+  audience: "https://pokemondreamteam.com",
 };
 
 // Define middleware that validates incoming bearer tokens
