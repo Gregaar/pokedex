@@ -9,7 +9,7 @@ const about = () => {
     <div className={classes.Container}>
       <div className={classes.Info}>
         <h2>Why was this site created?</h2>
-        <p>I&#39ve been teaching myself web development since October 2019.</p>
+        <p>I've been teaching myself web development since October 2019.</p>
         <p>I created this site as my first MERN stack project.</p>
         <h2>Where did the Pokemon Images come from?</h2>
         <p>
