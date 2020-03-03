@@ -3,7 +3,7 @@ module.exports = {
     port: process.env.PORT,
   },
   mongo: {
-    url: "mongodb+srv://admin:toast123!@kanto-6paqb.mongodb.net/test?retryWrites=true&w=majority",
+    url: process.env.MONGODB_URI,
   },
   pokeapi: {
     baseUrl: "https://pokeapi.co/api/v2",
