@@ -6,14 +6,14 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+app.use("/", express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 app.use(commonMiddleware());
 app.use(imageRouter());
 app.use(pokemonRouter());
-
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
 
 module.exports = app;
