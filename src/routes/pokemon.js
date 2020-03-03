@@ -16,6 +16,8 @@ router.delete("/user/favorite", checkJwt, pokedexController.deleteFavoritePokemo
 
 router.get("/user/favorites", checkJwt, pokedexController.getAllFavoritePokemon);
 
+router.get("/user/favorites/count", checkJwt, pokedexController.getFavoritePokemonCount);
+
 router.post("/user/favorites", checkJwt, pokedexController.getOneFavoritePokemon);
 
 module.exports = () => {

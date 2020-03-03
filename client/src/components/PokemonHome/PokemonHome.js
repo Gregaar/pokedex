@@ -21,7 +21,6 @@ const pokemonhome = (props) => {
   ) : (
     <div className={classes.Container}>
       <div className={classes.Info}>
-        <h1>Welcome to Kanto Cards</h1>
         <p>
           Now that you're logged in, head over to the Card List page where you can browse through the complete original
           card collection of the First Generation Pokemon.

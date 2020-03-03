@@ -10,6 +10,7 @@ const toolbar = (props) => {
   return (
     <header className={classes.Toolbar}>
       <DrawerToggle clicked={props.toggleClicked} />
+      <h1>Kanto Cards</h1>
       <div className={classes.Logo}>
         <Logo height="80%" />
       </div>

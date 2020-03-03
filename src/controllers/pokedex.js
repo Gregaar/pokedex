@@ -66,6 +66,19 @@ const getAllFavoritePokemon = async (req, res) => {
   }
 };
 
+const getFavoritePokemonCount = async (req, res) => {
+  try {
+    const userId = req.user.sub.split("|")[1];
+    const getSavedPokemon = await FavoritePokemon.find({ userId });
+    if (!getSavedPokemon) {
+      res.send("0");
+    }
+    return res.send(getSavedPokemon.length.toString());
+  } catch (error) {
+    return res.status(400).send(error);
+  }
+};
+
 const getOneFavoritePokemon = async (req, res) => {
   try {
     const userId = req.user.sub.split("|")[1];
@@ -99,5 +112,6 @@ module.exports = {
   saveFavoritePokemon,
   getAllFavoritePokemon,
   getOneFavoritePokemon,
+  getFavoritePokemonCount,
   deleteFavoritePokemon,
 };

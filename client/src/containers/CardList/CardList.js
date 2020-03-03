@@ -117,7 +117,7 @@ const CardList = (props) => {
         </Modal>
         <form onSubmit={(event) => searchCardHandler(event)}>
           <label htmlFor={"search"}>Pokedex Search</label>
-          <input id="search" type="search" placeholder="Search by Pokemon Name" />
+          <input id="search" type="search" placeholder="Search by Name" />
           <Button style={classes.Pokedex} />
         </form>{" "}
         {imageStateCopy

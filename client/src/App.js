@@ -8,12 +8,12 @@ import ScrollToTop from "./hoc/ScrollToTop/ScrollToTop";
 import Layout from "./hoc/Layout/Layout";
 import PokemonHome from "./components/PokemonHome/PokemonHome";
 import CardList from "./containers/CardList/CardList";
-import Profile from "./components/Profile/Profile";
+import Profile from "./containers/Profile/Profile";
 import IndividualCard from "./containers/IndividualCard/IndividualCard";
 import Favorites from "./containers/Favorites/Favorites";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import ClockLoader from "react-spinners/ClockLoader";
+import LoadingSpinner from "./components/UI/Spinner/Spinner";
 import "./App.css";
 
 function App() {
@@ -21,17 +21,7 @@ function App() {
 
   if (loading) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#ffcd1e",
-          height: "100vh",
-        }}
-      >
-        <ClockLoader color={"#2a75bb"} />
-      </div>
+      <LoadingSpinner />
     );
   }
 

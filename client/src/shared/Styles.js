@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 
+
 const sharedStyles = createUseStyles({
   Sticky: {
     position: "fixed",

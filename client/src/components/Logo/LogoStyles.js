@@ -13,7 +13,7 @@ const logoStyles = createUseStyles({
   },
   LogoRight: {
     "& img": {
-      margin: "5px 0 0 200px",
+      margin: "10px 0 0 250px",
     },
   },
 });
