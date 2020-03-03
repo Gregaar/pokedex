@@ -14,7 +14,8 @@ const pokeSearch = async (name) => {
     }
 
     const pokedexId = monFind.entry_number;
-    return pokedexId;
+    const idToString = pokedexId.toString();
+    return idToString;
   } catch (error) {
     return "ERROR: Unable to connect to the Pokedex";
   }
