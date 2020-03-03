@@ -2,6 +2,9 @@
   "name": "poke-project",
   "version": "0.0.0",
   "scripts": {
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "lint": "eslint ./src",
     "start": "node src/index.js",
     "watch": "nodemon src/index.js | pino-pretty",
