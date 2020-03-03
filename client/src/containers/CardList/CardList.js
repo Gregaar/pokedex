@@ -76,7 +76,6 @@ const CardList = (props) => {
           },
         })
         .then((res) => {
-          console.log(res)
           return setImageState(updateArray(imageState, res.data.results)); ///update object and add in next object
         })
         .catch((error) => {
