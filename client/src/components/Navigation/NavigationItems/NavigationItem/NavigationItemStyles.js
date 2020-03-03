@@ -17,7 +17,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- Galaxy S9/S9+ ----------- */
   /* Portrait */
-  "@media screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 4)": {
+  "@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
@@ -26,7 +26,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- Google Pixel ----------- */
   /* Portrait */
-  "@media screen and (width: 360px) and (height: 640px) and (-webkit-device-pixel-ratio: 3)": {
+  "@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
@@ -35,7 +35,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- Google Pixel XL ----------- */
   /* Portrait */
-  "@media screen and (width: 360px) and (height: 640px) and (-webkit-device-pixel-ratio: 4)": {
+  "@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
@@ -44,7 +44,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
   /* Portrait */
-  "@media only screen and (width: 320px) and (height: 568px) and (-webkit-min-device-pixel-ratio: 2)": {
+  "@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
@@ -53,7 +53,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
   /* Landscape */
-  "@media only screen and (width: 375px) and (height: 667px) and (-webkit-min-device-pixel-ratio: 2)": {
+  "@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
@@ -62,7 +62,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- iPhone 6+, 7+ and 8+ ----------- */
   /* Portrait */
-  "@media only screen and (width: 414px) and (height: 736px) and (-webkit-min-device-pixel-ratio: 3)": {
+  "@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-min-device-pixel-ratio: 3)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
@@ -71,7 +71,7 @@ const navItemStyles = createUseStyles({
   },
   /* ----------- iPhone X ----------- */
   /* Portrait */
-  "@media only screen and (width: 375px) and (height: 812px) and (-webkit-min-device-pixel-ratio: 3)": {
+  "@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-min-device-pixel-ratio: 3)": {
     NavigationItem: {
       fontSize: "1rem",
       fontWeight: "bold",
