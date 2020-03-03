@@ -13,7 +13,7 @@ app.use(imageRouter());
 app.use(pokemonRouter());
 
 app.get("*", function(request, response) {
-  response.sendFile(path.resolve(__dirname, "../public", "index.html"));
+  response.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 });
 
 module.exports = app;
