@@ -47,6 +47,7 @@ function App() {
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/" exact component={() => <PokemonHome isAuth={isAuthenticated} />} />
+        <Route path="/*" component={() => <PokemonHome isAuth={isAuthenticated} />} />
       </Switch>
     </ScrollToTop>
   );
