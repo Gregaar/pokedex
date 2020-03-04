@@ -15,6 +15,14 @@ const navItemStyles = createUseStyles({
       },
     },
   },
+   /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+    NavigationItem: {
+      fontSize: "1rem",
+      fontWeight: "bold",
+      lineHeight: "50px",
+    },
+  },
   /* ----------- Galaxy S9/S9+ ----------- */
   /* Portrait */
   "@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4)": {

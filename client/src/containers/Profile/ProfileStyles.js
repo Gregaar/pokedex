@@ -34,16 +34,44 @@ const profileStyles = createUseStyles({
       fontSize: "1rem",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
+  /* ----------- Laptops / Small Desktops ----------- */
+  "@media screen and (min-width: 1200px) and (max-width: 1600px)": {
     Info: {
-      height: "65%",
+      height: "55%",
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)": {
+  /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
     Info: {
-      height: "65%",
+      marginTop: "5%",
+      top: "auto",
+      bottom: "auto",
+      width: "90%",
+      height: "50%",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    Info: {
+      width: "75%",
+      height: "50%",
+      margin: "90px auto 0 auto",
+    },
+  },
+  /* Portrait Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    Info: {
+      width: "75%",
+      height: "50%",
+      margin: "90px auto 0 auto",
+    },
+  },
+  /* Landscape Tablets */
+  "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    Info: {
+      width: "65%",
+      height: "50%",
+      margin: "90px auto 0 auto",
     },
   },
   /* ----------- Galaxy S9/S9+ ----------- */

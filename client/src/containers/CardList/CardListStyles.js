@@ -43,23 +43,48 @@ const cardListStyles = createUseStyles({
     marginTop: "2%",
     cursor: "pointer",
   },
-  // make checklist of each device query, go through and make sure everything works one by one.
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
+  /* ----------- Laptops / Small Desktops ----------- */
+  "@media screen and (min-width: 1200px) and (max-width: 1919px)": {
     CardGrid: {
       "& form": {
-        width: "25%",
+        width: "18rem",
         "& label": {
           display: "block",
         },
       },
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
+   /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
     CardGrid: {
       "& form": {
-        width: "25%",
+        width: "17rem",
+        padding: "2% 0",
+        "& label": {
+          display: "block",
+        },
+        "& input, & button": {
+          display: "inline-block",
+        },
+      },
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    CardGrid: {
+      "& form": {
+        width: "16rem",
+        "& label": {
+          display: "block",
+        },
+      },
+    },
+  },
+  /* Portrait Tablets && Landscape Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 1199px)": {
+    CardGrid: {
+      "& form": {
+        width: "16rem",
         "& label": {
           display: "block",
         },

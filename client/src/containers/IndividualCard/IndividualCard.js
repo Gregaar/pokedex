@@ -201,9 +201,9 @@ const IndividualCard = (props) => {
           {favorite ? "Unfavorite" : "Favorite"}
         </Button>
       </div>
-
+          <div className={classes.MobileImage}>
       <Image style imageId={imageId} />
-
+      </div>
       <div className={classes.InfoContainer}>
         <h2>Name</h2>
         <p>{pokemonDetails.name}</p>

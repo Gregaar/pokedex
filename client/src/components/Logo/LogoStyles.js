@@ -12,8 +12,11 @@ const logoStyles = createUseStyles({
     },
   },
   LogoRight: {
+    width: "320%",
     "& img": {
-      margin: "10px 0 0 250px",
+      // margin: "10px 0 0 250px",
+      float: "right",
+      marginTop: "10px"
     },
   },
 });

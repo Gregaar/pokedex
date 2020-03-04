@@ -22,6 +22,34 @@ const imageStyles = createUseStyles({
     height: "500px",
     width: "380px",
   },
+  /* Small Phones */ 
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+    CardList: {
+      height: "200px",
+      width: "145px",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    CardList: {
+      height: "250px",
+      width: "200px",
+    },
+  },
+  /* Portrait Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    CardList: {
+      height: "300px",
+      width: "250px",
+    },
+  },
+  /* Landscape Tablets */
+  "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    CardList: {
+      height: "370px",
+      width: "300px",
+    },
+  },
   /* ----------- Galaxy S9/S9+ ----------- */
   /* Portrait */
   "@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4)": {

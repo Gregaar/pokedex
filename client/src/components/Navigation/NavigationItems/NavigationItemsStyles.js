@@ -6,16 +6,16 @@ const navStyles = createUseStyles({
     padding: 0,
     listStyle: "none",
     display: "flex",
-    flexFlow: "row",
+    flexFlow: "column",
     alignItems: "center",
     height: "100%",
     "& a": {
       cursor: "pointer",
     },
   },
-  "@media (max-width: 500px)": {
+  "@media (min-width: 500px)": {
     NavigationItems: {
-      flexFlow: "column",
+      flexFlow: "row",
     },
   },
 });

@@ -22,7 +22,63 @@ const pokemonHomeStyles = createUseStyles({
       color: "#8F5C2C",
     },
   },
-
+   /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+    Info: {
+      width: "91%",
+      padding: "0 1%",
+      "& h1": {
+        fontSize: "1.5rem",
+      },
+      "& p": {
+        fontSize: "0.9rem",
+        wordSpacing: "3px",
+        lineHeight: "25px",
+      },
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    Info: {
+      width: "90%",
+      padding: "0 1%",
+      "& h1": {
+        fontSize: "1.5rem",
+      },
+      "& p": {
+        fontSize: "0.9rem",
+        lineHeight: "25px",
+      },
+    },
+  },
+  /* Portrait Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    Info: {
+      width: "90%",
+      padding: "0 1%",
+      "& h1": {
+        fontSize: "1.5rem",
+      },
+      "& p": {
+        fontSize: "1.1rem",
+        lineHeight: "25px",
+      },
+    },
+  },
+   /* Landscape Tablets */
+   "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    Info: {
+      width: "75%",
+      padding: "0 1%",
+      "& h1": {
+        fontSize: "1.5rem",
+      },
+      "& p": {
+        fontSize: "1.1rem",
+        lineHeight: "25px",
+      },
+    },
+  },
   /* ----------- Galaxy S9/S9+ ----------- */
   /* Portrait */
   "@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4)": {

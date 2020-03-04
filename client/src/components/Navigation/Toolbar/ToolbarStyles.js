@@ -23,11 +23,19 @@ const toolbarStyles = createUseStyles({
       position: "absolute",
       top: "0",
       color: "#2a75bb",
-    }
+    },
   },
   Logo: {
     margin: "auto",
     height: "80%",
+  },
+  /* Small Phones */
+  "@media screen and (max-width: 300px)": {
+    Toolbar: {
+      "& h1": {
+        marginLeft: "20px",
+      },
+    },
   },
   "@media (max-width: 499px)": {
     Toolbar: {

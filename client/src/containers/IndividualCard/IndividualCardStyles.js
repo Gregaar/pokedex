@@ -7,6 +7,8 @@ const individualCardStyles = createUseStyles({
     paddingTop: "2rem",
     paddingBottom: "10rem",
     height: "82%",
+  },
+  MobileImage: {
     "& img": {
       float: "left",
       margin: "2rem 0 0 40rem",
@@ -80,12 +82,13 @@ const individualCardStyles = createUseStyles({
       color: "#f33621",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
-    Container: {
-      height: "100vh",
+  /* Laptops / Small Desktops */
+  "@media screen and (min-width: 1200px) and (max-width: 1919px)": {
+    MobileImage: {
+      display: "inline-block",
+      marginRight: "20rem",
       "& img": {
-        margin: "6% 0 0 250px",
+        margin: "0 auto",
       },
     },
     ButtonContainer: {
@@ -100,12 +103,17 @@ const individualCardStyles = createUseStyles({
       margin: "50px auto",
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
-    Container: {
-      height: "100vh",
+  /* Small Phones */ 
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+    MobileImage: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
       "& img": {
-        margin: "6% 0 0 250px",
+        display: "block",
+        margin: "0 auto",
+        width: "300px",
+        height: "420px",
       },
     },
     ButtonContainer: {
@@ -113,11 +121,81 @@ const individualCardStyles = createUseStyles({
     },
     InfoContainer: {
       display: "inline-block",
-      width: "20%",
-      margin: "50px auto 0 -270px",
+      margin: "10px auto 0 auto",
+      textAlign: "center",
+      width: "15rem",
     },
     Description: {
-      margin: "50px auto",
+      width: "90%",
+      margin: "10px 2px 0 auto",
+      textAlign: "left",
+      lineHeight: "25px",
+      fontSize: "0.9rem",
+      paddingRight: "5px",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    MobileImage: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+      "& img": {
+        display: "block",
+        margin: "0 auto",
+        width: "300px",
+        height: "420px",
+      },
+    },
+    ButtonContainer: {
+      display: "inherit",
+    },
+    InfoContainer: {
+      display: "inline-block",
+      margin: "10px auto 0 auto",
+      textAlign: "center",
+      width: "45%",
+      padding: "0",
+    },
+    Description: {
+      width: "90%",
+      margin: "10px auto 0 auto",
+      textAlign: "left",
+      lineHeight: "25px",
+      fontSize: "0.9rem",
+      paddingRight: "5px",
+    },
+  },
+  /* Portrait Tablets && Landscape Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 1199px)": {
+    MobileImage: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+      "& img": {
+        display: "block",
+        margin: "0 auto",
+        width: "300px",
+        height: "420px",
+      },
+    },
+    ButtonContainer: {
+      display: "inherit",
+    },
+    InfoContainer: {
+      display: "inline-block",
+      margin: "10px auto 0 auto",
+      textAlign: "center",
+      width: "45%",
+      padding: "0",
+    },
+    Description: {
+      width: "90%",
+      margin: "10px auto 0 auto",
+      textAlign: "left",
+      lineHeight: "25px",
+      fontSize: "0.9rem",
+      paddingRight: "5px",
     },
   },
   /* ----------- Galaxy S9/S9+ ----------- */
@@ -176,7 +254,7 @@ const individualCardStyles = createUseStyles({
   "@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)": {
     Container: {
       "& img": {
-        margin: "5% 0 0 30px",
+        margin: "0 auto",
         width: "300px",
         height: "420px",
       },

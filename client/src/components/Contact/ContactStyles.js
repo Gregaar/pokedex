@@ -33,16 +33,48 @@ const contactStyles = createUseStyles({
       fontSize: "1.2rem",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
+  /* ----------- Laptops / Small Desktops ----------- */
+  "@media screen and (min-device-width: 1200px) and (max-device-width: 1919px)": {
     Container: {
       height: "100vh",
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
+   /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
     Container: {
       height: "100vh",
+    },
+    ContactInfo: {
+      width: "90%",
+      paddingBottom: "20px",
+      margin: "100px auto",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    ContactInfo: {
+      width: "75%",
+      paddingBottom: "20px",
+    },
+  },
+  /* Portrait Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    Container: {
+      height: "100vh",
+    },
+    ContactInfo: {
+      width: "70%",
+      paddingBottom: "20px",
+    },
+  },
+  /* Landscape Tablets */
+  "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    Container: {
+      height: "100vh",
+    },
+    ContactInfo: {
+      width: "50%",
+      paddingBottom: "20px",
     },
   },
   /* ----------- Galaxy S9/S9+ ----------- */

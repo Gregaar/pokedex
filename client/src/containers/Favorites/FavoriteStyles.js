@@ -28,16 +28,40 @@ const favoriteStyles = createUseStyles({
       color: "green",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
+  /* ----------- Laptops / Small Desktops ----------- */
+  "@media screen and (min-width: 1200px) and (max-width: 1600px)": {
     Container: {
       height: "100vh",
     },
+    Empty: {
+      width: "45%",
+    },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
+   /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
     Container: {
       height: "100vh",
+    },
+    Empty: {
+      width: "60%",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    Container: {
+      height: "100%",
+    },
+    Empty: {
+      width: "50%",
+    },
+  },
+  /* Portrait Tablets && Landscape Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 1199px)": {
+    Container: {
+      height: "100%",
+    },
+    Empty: {
+      width: "55%",
     },
   },
   /* ----------- Galaxy S9/S9+ ----------- */

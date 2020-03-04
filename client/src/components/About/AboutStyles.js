@@ -28,16 +28,47 @@ const aboutStyles = createUseStyles({
       color: "#21a4f3",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
+  /* ----------- Laptops / Small Desktops ----------- */
   "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
     Container: {
       height: "100vh",
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)": {
+  /* Small Phones */ 
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
     Container: {
-      height: "100vh",
+      height: "100%",
+    },
+    Info: {
+      width: "90%",
+      fontSize: "0.9rem",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    Container: {
+      height: "100%",
+    },
+    Info: {
+      width: "90%",
+    },
+  },
+  /* Portrait Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    Container: {
+      height: "100%",
+    },
+    Info: {
+      width: "90%",
+    },
+  },
+  /* Landscape Tablets */
+  "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    Container: {
+      height: "100%",
+    },
+    Info: {
+      width: "75%",
     },
   },
   /* ----------- Galaxy S9/S9+ ----------- */
