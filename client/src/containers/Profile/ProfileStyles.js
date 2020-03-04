@@ -37,7 +37,7 @@ const profileStyles = createUseStyles({
   /* ----------- Laptops / Small Desktops ----------- */
   "@media screen and (min-width: 1200px) and (max-width: 1600px)": {
     Info: {
-      height: "65%",
+      height: "70%",
     },
   },
   /* Small Phones */ 
@@ -47,14 +47,14 @@ const profileStyles = createUseStyles({
       top: "auto",
       bottom: "auto",
       width: "90%",
-      height: "65%",
+      height: "70%",
     },
   },
   /* Bigger Phones */ 
   "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
     Info: {
       width: "75%",
-      height: "65%",
+      height: "70%",
       margin: "90px auto 0 auto",
     },
   },
@@ -62,7 +62,7 @@ const profileStyles = createUseStyles({
   "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
     Info: {
       width: "75%",
-      height: "65%",
+      height: "70%",
       margin: "90px auto 0 auto",
     },
   },
@@ -70,7 +70,7 @@ const profileStyles = createUseStyles({
   "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
     Info: {
       width: "65%",
-      height: "65%",
+      height: "70%",
       margin: "90px auto 0 auto",
     },
   },
