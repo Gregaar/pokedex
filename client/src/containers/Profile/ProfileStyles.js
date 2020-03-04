@@ -8,7 +8,7 @@ const profileStyles = createUseStyles({
   },
   Info: {
     width: "35%",
-    height: "65%",
+    height: "40%",
     paddingTop: "1%",
     position: "absolute",
     top: "0",
@@ -36,41 +36,78 @@ const profileStyles = createUseStyles({
   },
   /* ----------- Laptops / Small Desktops ----------- */
   "@media screen and (min-width: 1200px) and (max-width: 1600px)": {
+    Container: {
+      padding: "5%",
+    },
     Info: {
-      height: "70%",
+      height: "50%",
     },
   },
-  /* Small Phones */ 
-   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+  /* Small Phones */
+
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+    Container: {
+      padding: "5%",
+    },
     Info: {
+      lineHeight: "1px",
       marginTop: "5%",
       top: "auto",
       bottom: "auto",
       width: "90%",
-      height: "70%",
+      height: "60%",
     },
   },
-  /* Bigger Phones */ 
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px) and (orientation: landscape)": {
+    Info: {
+      height: "100%",
+    },
+  },
+  /* Bigger Phones */
+
   "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    Container: {
+      padding: "5%",
+    },
     Info: {
+      lineHeight: "1px",
       width: "75%",
-      height: "70%",
+      height: "60%",
       margin: "90px auto 0 auto",
     },
   },
-  /* Portrait Tablets */ 
-  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px) and (orientation: landscape)": {
     Info: {
+      height: "100%",
+    },
+  },
+  /* Portrait Tablets */
+
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    Container: {
+      padding: "5%",
+    },
+    Info: {
+      lineHeight: "1px",
       width: "75%",
-      height: "70%",
+      height: "40%",
       margin: "90px auto 0 auto",
+    },
+  },
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)  and (orientation: landscape)": {
+    Info: {
+      height: "100%",
     },
   },
   /* Landscape Tablets */
   "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    Container: {
+      padding: "5%",
+    },
     Info: {
+      lineHeight: "1px",
       width: "65%",
-      height: "70%",
+      height: "60%",
       margin: "90px auto 0 auto",
     },
   },
