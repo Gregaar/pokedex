@@ -259,7 +259,7 @@ const individualCardStyles = createUseStyles({
   "@media screen and (device-width: 640px) and (device-height: 360px) and (-webkit-device-pixel-ratio: 4)": {
     Container: {
       "& img": {
-        margin: "0 0 0 180px",
+        margin: "0 auto 0 180px",
         width: "280px",
         height: "320px",
       },
@@ -273,6 +273,59 @@ const individualCardStyles = createUseStyles({
       textAlign: "center",
       width: "45%",
       padding: "0",
+    },
+    Description: {
+      width: "90%",
+      margin: "10px auto",
+      textAlign: "left",
+      lineHeight: "25px",
+      fontSize: "0.9rem",
+      paddingRight: "5px",
+    },
+  },
+  /* ----------- Google Pixel 3XL ----------- */
+  /* Portrait */
+  "@media only screen and (device-width: 411px) and (device-height: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Container: {
+      "& img": {
+        margin: "0 45px",
+        width: "300px",
+        height: "420px",
+      },
+    },
+    ButtonContainer: {
+      display: "inline-grid",
+      gridTemplateColumns: "1fr 1fr",
+    },
+    InfoContainer: {
+      display: "inline-block",
+      margin: "10px auto 0 auto",
+      textAlign: "center",
+      width: "60%",
+      paddingLeft: "0",
+    },
+    Description: {
+      width: "90%",
+      margin: "10px auto auto 0",
+      textAlign: "left",
+      lineHeight: "25px",
+      fontSize: "0.9rem",
+      paddingRight: "5px",
+    },
+  },
+  /* Portrait */
+  "@media only screen and (device-height: 411px) and (device-width: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Container: {
+      "& img": {
+        margin: "60px 45px",
+        width: "300px",
+        height: "420px",
+      },
+    },
+    InfoContainer: {
+      display: "inline-block",
+      width: "30%",
+      margin: "10px auto",
     },
     Description: {
       width: "90%",

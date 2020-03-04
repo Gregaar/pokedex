@@ -134,6 +134,30 @@ const cardListStyles = createUseStyles({
       },
     },
   },
+  /* ----------- Google Pixel 3XL ----------- */
+  /* Portrait */
+  "@media only screen and (device-width: 411px) and (device-height: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    CardGrid: {
+      "& form": {
+        width: "70%",
+        padding: "2% 0",
+        "& label": {
+          display: "block",
+        },
+        "& input, & button": {
+          display: "inline-block",
+        },
+      },
+    },
+  },
+  /* Landscape */
+  "@media only screen and (device-height: 411px) and (device-width: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    CardGrid: {
+      "& form": {
+        width: "35%",
+      },
+    },
+  },
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
   /* Portrait */
   "@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-max-device-pixel-ratio: 2)": {

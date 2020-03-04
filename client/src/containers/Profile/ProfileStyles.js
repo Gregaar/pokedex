@@ -104,6 +104,25 @@ const profileStyles = createUseStyles({
       },
     },
   },
+  /* ----------- Google Pixel 3XL ----------- */
+  /* Portrait */
+  "@media only screen and (device-width: 411px) and (device-height: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Info: {
+      width: "90%",
+      height: "55%",
+    },
+  },
+  /* Landscape */
+  "@media only screen and (device-height: 411px) and (device-width: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Info: {
+      width: "50%",
+      height: "70%",
+      margin: "100px auto 0 auto",
+      "& img": {
+        display: "none",
+      },
+    },
+  },
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
   /* Portrait */
   "@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)": {

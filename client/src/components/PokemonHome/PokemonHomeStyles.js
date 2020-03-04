@@ -99,6 +99,28 @@ const pokemonHomeStyles = createUseStyles({
       },
     },
   },
+  /* ----------- Google Pixel 3XL ----------- */
+  /* Portrait */
+  "@media only screen and (device-width: 411px) and (device-height: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Info: {
+      width: "95%",
+      padding: "0 1%",
+      "& h1": {
+        fontSize: "1.5rem",
+      },
+      "& p": {
+        fontSize: "0.9rem",
+        wordSpacing: "3px",
+        lineHeight: "25px",
+      },
+    },
+  },
+  /* Landscape */
+  "@media only screen and (device-height: 411px) and (device-width: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Info: {
+      width: "98%",
+    },
+  },
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
   /* Portrait */
   "@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)": {

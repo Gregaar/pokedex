@@ -42,6 +42,15 @@ const navItemStyles = createUseStyles({
       lineHeight: "50px",
     },
   },
+  /* ----------- Google Pixel 3XL ----------- */
+  /* Portrait */
+  "@media only screen and (device-width: 411px) and (device-height: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    NavigationItem: {
+      fontSize: "1rem",
+      fontWeight: "bold",
+      lineHeight: "50px",
+    },
+  },
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
   /* Portrait */
   "@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)": {

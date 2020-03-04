@@ -88,6 +88,22 @@ const favoriteStyles = createUseStyles({
       width: "70%",
     },
   },
+  /* ----------- Google Pixel 3XL ----------- */
+  /* Portrait */
+  "@media only screen and (device-width: 411px) and (device-height: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Container: {
+      height: "100vh",
+    },
+    Empty: {
+      width: "70%",
+    },
+  },
+  /* Landscape */
+  "@media only screen and (device-height: 411px) and (device-width: 823px) and (-webkit-min-device-pixel-ratio: 2)": {
+    Container: {
+      height: "100%",
+    },
+  },
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
   /* Portrait */
   "@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)": {
