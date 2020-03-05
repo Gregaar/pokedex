@@ -7,8 +7,8 @@ const profileStyles = createUseStyles({
     background: `url(${Background})`,
   },
   Info: {
-    width: "35%",
-    height: "40%",
+    width: "48rem",
+    height: "40rem",
     paddingTop: "1%",
     position: "absolute",
     top: "0",
@@ -23,15 +23,37 @@ const profileStyles = createUseStyles({
     },
     "& h3": {
       color: "#f33621",
-      textShadow: "1px 1px 2px white",
+      textShadow: "1px 1px 1px black",
       fontSize: "2rem",
     },
     "& h4": {
-      color: "#4b21f3",
+      color: "#2a75bb",
     },
     "& h5": {
       color: "#f33621",
       fontSize: "1rem",
+    },
+  },
+  Favorites: {
+    display: "inline-grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    "& p": {
+      color: "white",
+      fontWeight: "bold",
+      textShadow: "1px 1px 2px black",
+      textTransform: "capitalize",
+      paddingTop: "5px",
+    },
+  },
+  /* Smaller than 1920px */ 
+  "@media screen and (min-width: 1601px) and (max-width: 1919px)": {
+    Container: {
+      padding: "5%",
+    },
+    Info: {
+      height: "38rem",
+      marginTop: "8rem",
+      overflow: "scroll",
     },
   },
   /* ----------- Laptops / Small Desktops ----------- */
@@ -40,7 +62,9 @@ const profileStyles = createUseStyles({
       padding: "5%",
     },
     Info: {
-      height: "50%",
+      height: "38rem",
+      marginTop: "8rem",
+      overflow: "scroll",
     },
   },
   /* Small Phones */
@@ -50,12 +74,12 @@ const profileStyles = createUseStyles({
       padding: "5%",
     },
     Info: {
-      lineHeight: "1px",
+      overflow: "scroll",
       marginTop: "5%",
       top: "auto",
       bottom: "auto",
       width: "90%",
-      height: "60%",
+      height: "80%",
     },
   },
   "@media screen and (min-device-width: 300px) and (max-device-width: 499px) and (orientation: landscape)": {
@@ -65,14 +89,14 @@ const profileStyles = createUseStyles({
   },
   /* Bigger Phones */
 
-  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+  "@media only screen and (min-device-width: 500px) and (max-device-width: 767px)": {
     Container: {
       padding: "5%",
     },
     Info: {
-      lineHeight: "1px",
+      overflow: "scroll",
       width: "75%",
-      height: "60%",
+      height: "75%",
       margin: "90px auto 0 auto",
     },
   },
@@ -88,7 +112,7 @@ const profileStyles = createUseStyles({
       padding: "5%",
     },
     Info: {
-      lineHeight: "1px",
+      overflow: "scroll",
       width: "75%",
       height: "40%",
       margin: "90px auto 0 auto",
@@ -105,9 +129,9 @@ const profileStyles = createUseStyles({
       padding: "5%",
     },
     Info: {
-      lineHeight: "1px",
-      width: "65%",
-      height: "60%",
+      overflow: "scroll",
+      width: "75%",
+      height: "75%",
       margin: "90px auto 0 auto",
     },
   },

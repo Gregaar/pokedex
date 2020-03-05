@@ -179,31 +179,49 @@ const IndividualCard = (props) => {
     </React.Fragment>
   ) : null;
 
+  const cardListOrProfileButton = favorite ? (
+    <Button
+      clicked={() =>
+        props.history.push({
+          pathname: "/profile",
+        })
+      }
+    >
+      Go to Profile
+    </Button>
+  ) : (
+    <Button
+      clicked={() =>
+        props.history.push({
+          pathname: "/cardlist",
+        })
+      }
+    >
+      Back to Card List
+    </Button>
+  );
+
   const checkFavStyle = favorite ? classes.YellowBtn : classes.GreenBtn;
 
   return (
     <div className={classes.Container}>
       {urlId > 151 || (urlId < 1 && !location.pathname.includes("profile")) ? <Redirect to="/cardlist" /> : null}
+      
       <div className={classes.ButtonContainer}>
-        <Button
-          clicked={() =>
-            props.history.push({
-              pathname: "/cardlist",
-            })
-          }
-        >
-          Back to Card List
-        </Button>
+        {cardListOrProfileButton}
 
         {navigationButtons}
 
         <Button style={checkFavStyle} clicked={(event) => onFavoriteHandler(event, urlId)}>
           {favorite ? "Unfavorite" : "Favorite"}
         </Button>
+
       </div>
-          <div className={classes.MobileImage}>
-      <Image style imageId={imageId} />
+
+      <div className={classes.MobileImage}>
+        <Image style imageId={imageId} />
       </div>
+
       <div className={classes.InfoContainer}>
         <h2>Name</h2>
         <p>{pokemonDetails.name}</p>
@@ -222,6 +240,7 @@ const IndividualCard = (props) => {
         <h2>Description</h2>
         <p>{pokemonDetails.flavorText}</p>
       </div>
+      
     </div>
   );
 };

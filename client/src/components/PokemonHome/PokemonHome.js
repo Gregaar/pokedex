@@ -22,9 +22,11 @@ const pokemonhome = (props) => {
     <div className={classes.Container}>
       <div className={classes.Info}>
         <p>
-          Now that you're logged in, head over to the Card List page where you can browse through the complete original
-          card collection of the First Generation Pokemon.
+          Head over to the Card List page where you can browse through the complete original card
+          collection of the First Generation Pokemon.
         </p>
+
+        <p>The more Pokemon you favorite, the more accurate your Trainer Profile will become!</p>
         <p>You can also take a look at some of my own Kanto cards below. </p>
         <p>Enjoy!</p>
       </div>

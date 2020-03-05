@@ -11,6 +11,8 @@ router.get("/card", checkJwt, pokedexController.findPokemonByName);
 
 router.get("/card/:id", checkJwt, pokedexController.getPokemonInfo);
 
+router.get("/trainer/info", checkJwt, pokedexController.getPokeTrainerInfo);
+
 router.post("/user/favorite", checkJwt, pokedexController.saveFavoritePokemon);
 
 router.delete("/user/favorite", checkJwt, pokedexController.deleteFavoritePokemon);

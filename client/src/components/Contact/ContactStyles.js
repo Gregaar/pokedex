@@ -50,11 +50,21 @@ const contactStyles = createUseStyles({
       margin: "100px auto",
     },
   },
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px) and (orientation: landscape)": {
+    Container: {
+      height: "100vh",
+    },
+  },
   /* Bigger Phones */ 
   "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
     ContactInfo: {
       width: "75%",
       paddingBottom: "20px",
+    },
+  },
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px) and (orientation: landscape)": {
+    Container: {
+      height: "100vh",
     },
   },
   /* Portrait Tablets */ 
