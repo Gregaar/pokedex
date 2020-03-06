@@ -70,7 +70,7 @@ const Favorites = (props) => {
   if (copiedFavorites.length > 0) {
     showFavorites = copiedFavorites
       .sort((a, b) => a.pokemonId - b.pokemonId)
-      .map((favorite) => <IndividualCard key={favorite.pokemonId} favoriteId={favorite.pokemonId} removeCard />);
+      .map((favorite) => <IndividualCard key={favorite.pokemonId} favoriteId={favorite.pokemonId} profileBtn />);
   } else {
     showFavorites = noFavorites;
   }
