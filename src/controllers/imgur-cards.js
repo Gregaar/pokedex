@@ -27,7 +27,7 @@ const savePokemonImgurIds = async () => {
     const images = await getAlbum(pokemonCardsAlbum);
     images.forEach(async (image) => {
       const imgurCard = new PokemonCards({ imageId: image.id, pokedexEntry: +image.description });
-      await imgurCard.save();
+      return await imgurCard.save();
     });
   } catch (error) {
     return error;
@@ -43,7 +43,7 @@ const savePersonalImgurIds = async () => {
     const images = await getAlbum(personalCardsAlbum);
     images.forEach(async (image) => {
       const imgurCard = new PersonalCards({ imageId: image.id, pokedexEntry: +image.description });
-      await imgurCard.save();
+      return await imgurCard.save();
     });
   } catch (error) {
     return error;
@@ -52,13 +52,13 @@ const savePersonalImgurIds = async () => {
 
 const getOneCardImage = async (req, res) => {
   if (req.params.id > 151 || req.params.id < 1) {
-    res.status(400).send();
+    return res.status(400).send();
   } else {
     try {
       const findCard = await PokemonCards.findOne({ pokedexEntry: req.params.id });
-      res.send(findCard.imageId);
+      return res.send(findCard.imageId);
     } catch (error) {
-      res.status(400).send(error);
+      return res.status(400).send(error);
     }
   }
 };

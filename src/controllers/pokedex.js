@@ -6,7 +6,7 @@ const FavoritePokemon = require("../models/favorite-pokemon");
 
 const getPokemonInfo = async (req, res) => {
   if (req.params.id > 151 || req.params.id < 1) {
-    res.status(400).send();
+    return res.status(400).send();
   } else {
     try {
       const pokemonInfoClient = createPokemonSpeciesClient(config.get("pokeapi.baseUrl"));
@@ -16,9 +16,9 @@ const getPokemonInfo = async (req, res) => {
         return "Unable to find Pokemon";
       }
 
-      res.send(info);
+      return res.send(info);
     } catch (error) {
-      res.status(400).send(error);
+      return res.status(400).send(error);
     }
   }
 };
@@ -29,9 +29,9 @@ const findPokemonByName = async (req, res) => {
     if (!pokemonId) {
       return "Unable to find Pokemon";
     }
-    res.send(pokemonId);
+    return res.send(pokemonId);
   } catch (error) {
-    res.status(400).send(error);
+    return res.status(400).send(error);
   }
 };
 
@@ -60,10 +60,10 @@ const saveFavoritePokemon = async (req, res) => {
         captureChance,
       });
       if (!pokemonToSave) {
-        res.status(500).send("Unable to save to favorites.");
+        return res.status(500).send("Unable to save to favorites.");
       }
       await pokemonToSave.save();
-      res.send();
+      return res.send();
     }
   } catch (error) {
     res.status(400).send(error);
@@ -74,13 +74,19 @@ const getPokeTrainerInfo = async (req, res) => {
   try {
     const userId = req.user.sub.split("|")[1];
     const getSavedPokemon = await FavoritePokemon.find({ userId });
+
     if (!getSavedPokemon) {
-      res.status(404).send("No favorites found");
+      return res.status(404).send("No favorites found");
     }
+
     const favorites = ["color", "type", "habitat", "rate"];
+
     const trainerFavorites = getFavorites(getSavedPokemon, favorites);
+
     trainerFavorites.firstCatch = await firstFavoritedPokemon(getSavedPokemon);
+
     trainerFavorites.skillLevel = getTrainerSkill(getSavedPokemon);
+
     return res.send(trainerFavorites);
   } catch (error) {
     return res.status(400).send(error);
@@ -92,7 +98,7 @@ const getAllFavoritePokemon = async (req, res) => {
     const userId = req.user.sub.split("|")[1];
     const getSavedPokemon = await FavoritePokemon.find({ userId });
     if (!getSavedPokemon) {
-      res.status(404).send("No favorites found");
+      return res.status(404).send("No favorites found");
     }
     return res.send(getSavedPokemon);
   } catch (error) {
@@ -105,7 +111,7 @@ const getFavoritePokemonCount = async (req, res) => {
     const userId = req.user.sub.split("|")[1];
     const getSavedPokemon = await FavoritePokemon.find({ userId });
     if (!getSavedPokemon) {
-      res.send("0");
+      return res.send("0");
     }
     return res.send(getSavedPokemon.length.toString());
   } catch (error) {
@@ -118,12 +124,12 @@ const getOneFavoritePokemon = async (req, res) => {
     const userId = req.user.sub.split("|")[1];
     const getOnePokemon = await FavoritePokemon.findOne({ userId, pokemonId: req.body.pokemonId });
     if (!getOnePokemon) {
-      res.status(404).send();
+      return res.status(404).send();
     } else {
-      res.send("true");
+      return res.send("true");
     }
   } catch (error) {
-    res.status(400).send();
+    return res.status(400).send();
   }
 };
 
@@ -132,11 +138,11 @@ const deleteFavoritePokemon = async (req, res) => {
     const userId = req.user.sub.split("|")[1];
     const getPokemon = await FavoritePokemon.deleteOne({ userId, pokemonId: req.body.pokemonId });
     if (!getPokemon) {
-      res.status(404).send();
+      return res.status(404).send();
     }
-    res.send();
+    return res.send();
   } catch (error) {
-    res.status(400).send();
+    return res.status(400).send();
   }
 };
 

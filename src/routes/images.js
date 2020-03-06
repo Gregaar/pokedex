@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const { logger } = require("../logger");
-const path = require("path");
 const checkJwt = require("../middleware/auth");
 const paginatedResults = require("../middleware/pagination");
 const PersonalCards = require("../models/personal-cards");

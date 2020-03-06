@@ -30,13 +30,12 @@ const Landing = () => {
     getPersonalImgurIds();
   }, [page]);
 
-  const fetchMoreListItems = async () => {
-    setPage(page + 1);
-    setIsFetching(false);
-  };
-
   useEffect(() => {
     if (!isFetching) return;
+    const fetchMoreListItems = async () => {
+      setPage(page + 1);
+      setIsFetching(false);
+    };
     fetchMoreListItems();
   }, [isFetching, page]);
 
@@ -64,8 +63,7 @@ const Landing = () => {
   }, []);
 
   const goToBottom = () => {
-    window.scrollTo(0,document.body.scrollHeight);
-    fetchMoreListItems();
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   if (imageState) {

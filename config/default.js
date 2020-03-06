@@ -1,6 +1,6 @@
 module.exports = {
   app: {
-    port: 9000,
+    port: 9001,
   },
   mongo: {
     url: "mongodb://127.0.0.1:27017/poke-project-api",
