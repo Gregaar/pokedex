@@ -47,13 +47,14 @@ const CardList = (props) => {
       setShowModal(true);
     }
   };
+  
+  const fetchMoreListItems = async () => {
+    setPage(page + 1);
+    setIsFetching(false);
+  };
 
   useEffect(() => {
     if (!isFetching) return;
-    const fetchMoreListItems = async () => {
-      setPage(page + 1);
-      setIsFetching(false);
-    };
     fetchMoreListItems();
   }, [isFetching, page]);
 
@@ -108,6 +109,11 @@ const CardList = (props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const goToBottom = () => {
+    window.scrollTo(0,document.body.scrollHeight);
+    fetchMoreListItems();
+  };
+
   return (
     <div className={classes.Container}>
       <div className={classes.CardGrid}>
@@ -124,8 +130,11 @@ const CardList = (props) => {
           .map((image) => (
             <Image key={image.pokedexEntry} imageId={image.imageId} clicked={() => goToCard(image.pokedexEntry)} />
           ))}
-        <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
-          ^
+        <button className={sharedStyle.StickyUp} style={{ display: showButton }} onClick={goToTop}>
+        ↑ 
+        </button>
+        <button className={sharedStyle.StickyDown} style={{ display: showButton }} onClick={goToBottom}>
+          ↓
         </button>
       </div>
     </div>

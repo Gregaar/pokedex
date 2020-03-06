@@ -30,12 +30,13 @@ const Landing = () => {
     getPersonalImgurIds();
   }, [page]);
 
+  const fetchMoreListItems = async () => {
+    setPage(page + 1);
+    setIsFetching(false);
+  };
+
   useEffect(() => {
     if (!isFetching) return;
-    const fetchMoreListItems = async () => {
-      setPage(page + 1);
-      setIsFetching(false);
-    };
     fetchMoreListItems();
   }, [isFetching, page]);
 
@@ -62,6 +63,11 @@ const Landing = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const goToBottom = () => {
+    window.scrollTo(0,document.body.scrollHeight);
+    fetchMoreListItems();
+  };
+
   if (imageState) {
     const imagesCopy = [...imageState];
     images = imagesCopy.map((img) => <Image key={img._id} imageId={img.imageId} />);
@@ -73,8 +79,11 @@ const Landing = () => {
     <div className={classes.Landing}>
       <div className={classes.CardGrid}>
         {images}
-        <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
-          ^
+        <button className={sharedStyle.StickyUp} style={{ display: showButton }} onClick={goToTop}>
+          ↑
+        </button>
+        <button className={sharedStyle.StickyDown} style={{ display: showButton }} onClick={goToBottom}>
+          ↓
         </button>
       </div>
     </div>
