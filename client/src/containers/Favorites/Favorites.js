@@ -79,8 +79,8 @@ const Favorites = (props) => {
     <React.Fragment>
       <div>
         {showFavorites}{" "}
-        <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
-          ^
+        <button className={sharedStyle.StickyUp} style={{ display: showButton }} onClick={goToTop}>
+        ↑
         </button>
       </div>
     </React.Fragment>

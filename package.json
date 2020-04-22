@@ -20,7 +20,7 @@
     "express-pino-logger": "^4.0.0",
     "helmet": "^3.21.2",
     "imgur": "^0.3.1",
-    "jest": "^24.9.0",
+    "jest": "^25.4.0",
     "jsonwebtoken": "^8.5.1",
     "jwks-rsa": "^1.7.0",
     "mongodb": "^3.5.2",
