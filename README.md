@@ -1,5 +1,5 @@
-This project uses the MERN stack to deliver a web app which allows your to favorite different pokemon.
+This project uses the MERN stack to deliver a web app which allows users to favorite different types of Pokemon.
 
-Depending on the pokemon chosen, the users profile is then generated inline with this.
+Depending on the Pokemon chosen, the users profile is generated using the Pokemon's information.
 
 This website is live at http://kanto-cards.herokuapp.com/
