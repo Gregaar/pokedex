@@ -22,7 +22,9 @@
     "mongoose": "^5.8.11",
     "node-fetch": "^2.6.0",
     "pino": "^5.16.0",
-    "pokedex-promise-v2": "^3.2.0"
+    "pokedex-promise-v2": "^3.2.0",
+    "jwks-rsa": "^1.7.0",
+    "express-jwt": "^5.3.1"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
