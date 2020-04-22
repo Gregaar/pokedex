@@ -139,7 +139,7 @@ const IndividualCard = (props) => {
         props.history.push("/");
       }
       await axios
-        .get(`/cardlist/${urlId}`, {
+        .get(`/card/${urlId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -185,14 +185,15 @@ const IndividualCard = (props) => {
     <div className={classes.Container}>
       {urlId > 151 || (urlId < 1 && !location.pathname.includes("profile")) ? <Redirect to="/cardlist" /> : null}
       <div className={classes.ButtonContainer}>
+        
         <Button
           clicked={() =>
             props.history.push({
-              pathname: "/cardlist",
+              pathname: `${props.profileBtn ? "/profile" : "/cardlist"}`,
             })
           }
         >
-          Back to Card List
+         {props.profileBtn ? "Go to Profile" : "Back to Card List"}
         </Button>
 
         {navigationButtons}
@@ -201,9 +202,9 @@ const IndividualCard = (props) => {
           {favorite ? "Unfavorite" : "Favorite"}
         </Button>
       </div>
-
+          <div className={classes.MobileImage}>
       <Image style imageId={imageId} />
-
+      </div>
       <div className={classes.InfoContainer}>
         <h2>Name</h2>
         <p>{pokemonDetails.name}</p>

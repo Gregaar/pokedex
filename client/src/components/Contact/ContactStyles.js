@@ -33,163 +33,58 @@ const contactStyles = createUseStyles({
       fontSize: "1.2rem",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
+  /* ----------- Laptops / Small Desktops ----------- */
+  "@media screen and (min-device-width: 1200px) and (max-device-width: 1919px)": {
     Container: {
       height: "100vh",
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
-    Container: {
-      height: "100vh",
-    },
-  },
-  /* ----------- Galaxy S9/S9+ ----------- */
-  /* Portrait */
-  "@media screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 4)": {
+   /* Small Phones */ 
+   "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
     Container: {
       height: "100vh",
     },
     ContactInfo: {
       width: "90%",
       paddingBottom: "20px",
+      margin: "100px auto",
     },
   },
-  /* Landscape */
-  "@media screen and (height: 360px) and (width: 740px) and (-webkit-device-pixel-ratio: 4)": {
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px) and (orientation: landscape)": {
     Container: {
-      paddingTop: "0",
+      height: "100vh",
+    },
+  },
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    ContactInfo: {
+      width: "75%",
+      paddingBottom: "20px",
+    },
+  },
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px) and (orientation: landscape)": {
+    Container: {
+      height: "100vh",
+    },
+  },
+  /* Portrait Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 991px)": {
+    Container: {
+      height: "100vh",
+    },
+    ContactInfo: {
+      width: "70%",
+      paddingBottom: "20px",
+    },
+  },
+  /* Landscape Tablets */
+  "@media only screen and (min-device-width: 992px) and (max-device-width: 1199px)": {
+    Container: {
+      height: "100vh",
     },
     ContactInfo: {
       width: "50%",
       paddingBottom: "20px",
-      margin: "0 auto",
-    },
-  },
-  /* ----------- Google Pixel ----------- */
-  /* Portrait */
-  "@media screen and (width: 360px) and (height: 640px) and (-webkit-device-pixel-ratio: 3)": {
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-    },
-  },
-  /* Landscape */
-  "@media screen and (width: 640px) and (height: 360px) and (-webkit-device-pixel-ratio: 3)": {
-    Container: {
-      paddingTop: "0",
-    },
-    ContactInfo: {
-      width: "50%",
-      paddingBottom: "20px",
-      margin: "0 auto",
-    },
-  },
-  /* ----------- Google Pixel XL ----------- */
-  /* Portrait */
-  "@media screen and (width: 360px) and (height: 640px) and (-webkit-device-pixel-ratio: 4)": {
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-    },
-  },
-  /* Landscape */
-  "@media screen and (width: 640px) and (height: 360px) and (-webkit-device-pixel-ratio: 4)": {
-    Container: {
-      paddingTop: "0",
-    },
-    ContactInfo: {
-      width: "50%",
-      paddingBottom: "20px",
-      margin: "0 auto",
-    },
-  },
-  /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
-  /* Portrait */
-  "@media only screen and (width: 320px) and (height: 568px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      height: "100vh",
-    },
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-      margin: "100px auto",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 568px) and (height: 320px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      height: "100%",
-    },
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-      margin: "100px auto",
-    },
-  },
-  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-  /* Portrait */
-  "@media only screen and (width: 375px) and (height: 667px) and (-webkit-max-device-pixel-ratio: 2)": {
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-      margin: "100px auto",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 667px) and (height: 375px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      height: "100%",
-    },
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-      margin: "100px auto",
-    },
-  },
-  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
-  /* Portrait */
-  "@media only screen and (width: 414px) and (height: 736px) and (-webkit-max-device-pixel-ratio: 3)": {
-    Container: {
-      height: "100vh",
-    },
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-      margin: "100px auto",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 736px) and (height: 414px) and (-webkit-max-device-pixel-ratio: 3)": {
-    Container: {
-      height: "100%",
-    },
-    ContactInfo: {
-      width: "50%",
-      paddingBottom: "20px",
-      margin: "100px auto",
-    },
-  },
-  /* ----------- iPhone X ----------- */
-  /* Portrait */
-  "@media only screen and (width: 375px) and (height: 812px) and (-webkit-max-device-pixel-ratio: 3)": {
-    Container: {
-      height: "100vh",
-    },
-    ContactInfo: {
-      width: "90%",
-      paddingBottom: "20px",
-      margin: "200px auto",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 812px) and (height: 375px) and (-webkit-max-device-pixel-ratio: 3)": {
-    Container: {
-      height: "100%",
-    },
-    ContactInfo: {
-      width: "50%",
     },
   },
 });

@@ -7,6 +7,8 @@ const individualCardStyles = createUseStyles({
     paddingTop: "2rem",
     paddingBottom: "10rem",
     height: "82%",
+  },
+  MobileImage: {
     "& img": {
       float: "left",
       margin: "2rem 0 0 40rem",
@@ -80,12 +82,13 @@ const individualCardStyles = createUseStyles({
       color: "#f33621",
     },
   },
-  /* ----------- Non-Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)": {
-    Container: {
-      height: "100vh",
+  /* Laptops / Small Desktops */
+  "@media screen and (min-width: 1200px) and (max-width: 1919px)": {
+    MobileImage: {
+      display: "inline-block",
+      marginRight: "20rem",
       "& img": {
-        margin: "6% 0 0 250px",
+        margin: "0 auto",
       },
     },
     ButtonContainer: {
@@ -100,32 +103,15 @@ const individualCardStyles = createUseStyles({
       margin: "50px auto",
     },
   },
-  /* ----------- Retina Screens ----------- */
-  "@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)and (min-resolution: 192dpi)": {
-    Container: {
-      height: "100vh",
+  /* Small Phones */ 
+  "@media screen and (min-device-width: 300px) and (max-device-width: 499px)": {
+    MobileImage: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
       "& img": {
-        margin: "6% 0 0 250px",
-      },
-    },
-    ButtonContainer: {
-      display: "inherit",
-    },
-    InfoContainer: {
-      display: "inline-block",
-      width: "20%",
-      margin: "50px auto 0 -270px",
-    },
-    Description: {
-      margin: "50px auto",
-    },
-  },
-  /* ----------- Galaxy S9/S9+ ----------- */
-  /* Portrait */
-  "@media screen and (width: 360px) and (height: 740px) and (-webkit-device-pixel-ratio: 4)": {
-    Container: {
-      "& img": {
-        margin: "5% 0 0 30px",
+        display: "block",
+        margin: "0 auto",
         width: "300px",
         height: "420px",
       },
@@ -137,75 +123,28 @@ const individualCardStyles = createUseStyles({
       display: "inline-block",
       margin: "10px auto 0 auto",
       textAlign: "center",
-      width: "90%",
+      width: "15rem",
     },
     Description: {
       width: "90%",
-      margin: "10px auto auto 0",
+      margin: "10px 2px 0 auto",
       textAlign: "left",
       lineHeight: "25px",
       fontSize: "0.9rem",
       paddingRight: "5px",
     },
   },
-  /* Landscape */
-  "@media screen and (height: 360px) and (width: 740px) and (-webkit-device-pixel-ratio: 4)": {
-    Container: {
+  /* Bigger Phones */ 
+  "@media only screen and (min-device-width: 480px) and (max-device-width: 767px)": {
+    MobileImage: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
       "& img": {
-        margin: "60px 45px",
+        display: "block",
+        margin: "0 auto",
         width: "300px",
         height: "420px",
-      },
-    },
-    InfoContainer: {
-      display: "inline-block",
-      width: "30%",
-      margin: "10px auto",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* ----------- Google Pixel ----------- */
-  /* Portrait */
-  "@media screen and (width: 360px) and (height: 640px) and (-webkit-device-pixel-ratio: 3)": {
-    Container: {
-      "& img": {
-        margin: "5% 0 0 30px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    ButtonContainer: {
-      display: "inherit",
-    },
-    InfoContainer: {
-      display: "inline-block",
-      margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "90%",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto auto 0",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* Landscape */
-  "@media screen and (width: 640px) and (height: 360px) and (-webkit-device-pixel-ratio: 3)": {
-    Container: {
-      "& img": {
-        margin: "30px 178px 0 178px",
-        width: "280px",
-        height: "320px",
       },
     },
     ButtonContainer: {
@@ -220,48 +159,24 @@ const individualCardStyles = createUseStyles({
     },
     Description: {
       width: "90%",
-      margin: "10px auto",
+      margin: "10px auto 0 auto",
       textAlign: "left",
       lineHeight: "25px",
       fontSize: "0.9rem",
       paddingRight: "5px",
     },
   },
-  /* ----------- Google Pixel XL ----------- */
-  /* Portrait */
-  "@media screen and (width: 360px) and (height: 640px) and (-webkit-device-pixel-ratio: 4)": {
-    Container: {
+  /* Portrait Tablets && Landscape Tablets */ 
+  "@media only screen and (min-device-width: 768px) and (max-device-width: 1199px)": {
+    MobileImage: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
       "& img": {
-        margin: "5% 0 0 30px",
+        display: "block",
+        margin: "0 auto",
         width: "300px",
         height: "420px",
-      },
-    },
-    ButtonContainer: {
-      display: "inherit",
-    },
-    InfoContainer: {
-      display: "inline-block",
-      margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "90%",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto auto 0",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* Landscape */
-  "@media screen and (width: 640px) and (height: 360px) and (-webkit-device-pixel-ratio: 4)": {
-    Container: {
-      "& img": {
-        margin: "0 0 0 180px",
-        width: "280px",
-        height: "320px",
       },
     },
     ButtonContainer: {
@@ -276,225 +191,7 @@ const individualCardStyles = createUseStyles({
     },
     Description: {
       width: "90%",
-      margin: "10px auto",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
-  /* Portrait */
-  "@media only screen and (width: 320px) and (height: 568px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      "& img": {
-        margin: "0 10px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    ButtonContainer: {
-      display: "inherit",
-    },
-    InfoContainer: {
-      display: "inline-block",
       margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "90%",
-    },
-    Description: {
-      width: "88%",
-      margin: "10px auto auto 0",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 568px) and (height: 320px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      "& img": {
-        margin: "75px auto auto 0",
-        width: "280px",
-        height: "320px",
-      },
-    },
-    ButtonContainer: {
-      "& button": {
-        width: "40%",
-      },
-    },
-    InfoContainer: {
-      display: "inline-block",
-      margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "45%",
-      padding: "0",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-  /* Portrait */
-  "@media only screen and (width: 375px) and (height: 667px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      "& img": {
-        margin: "0 45px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    ButtonContainer: {
-      display: "inherit",
-    },
-    InfoContainer: {
-      display: "inline-block",
-      margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "60%",
-      paddingLeft: "0",
-    },
-    Description: {
-      width: "88%",
-      margin: "10px auto auto 0",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 667px) and (height: 375px) and (-webkit-max-device-pixel-ratio: 2)": {
-    Container: {
-      "& img": {
-        margin: "90px 5px",
-        width: "280px",
-        height: "320px",
-      },
-    },
-    ButtonContainer: {
-      display: "inherit",
-    },
-    InfoContainer: {
-      width: "45%",
-      margin: "10px auto 0 300px",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
-  /* Portrait */
-  "@media only screen and (width: 414px) and (height: 736px) and (-webkit-max-device-pixel-ratio: 3)": {
-    Container: {
-      "& img": {
-        margin: "0 55px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    ButtonContainer: {
-      display: "inline-grid",
-      gridTemplateColumns: "1fr 1fr",
-    },
-    InfoContainer: {
-      display: "inline-block",
-      margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "60%",
-      paddingLeft: "0",
-    },
-    Description: {
-      width: "91%",
-      margin: "10px auto auto 0",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 736px) and (height: 414px) and (-webkit-max-device-pixel-ratio: 3)": {
-    Container: {
-      "& img": {
-        margin: "60px 45px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    InfoContainer: {
-      display: "inline-block",
-      width: "30%",
-      margin: "10px auto",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* ----------- iPhone X ----------- */
-  /* Portrait */
-  "@media only screen and (width: 375px) and (height: 812px) and (-webkit-min-device-pixel-ratio: 3)": {
-    Container: {
-      "& img": {
-        margin: "0 45px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    ButtonContainer: {
-      display: "inline-grid",
-      gridTemplateColumns: "1fr 1fr",
-    },
-    InfoContainer: {
-      display: "inline-block",
-      margin: "10px auto 0 auto",
-      textAlign: "center",
-      width: "60%",
-      paddingLeft: "0",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto auto 0",
-      textAlign: "left",
-      lineHeight: "25px",
-      fontSize: "0.9rem",
-      paddingRight: "5px",
-    },
-  },
-  /* Landscape */
-  "@media only screen and (width: 812px) and (height: 375px) and (-webkit-min-device-pixel-ratio: 3)": {
-    Container: {
-      "& img": {
-        margin: "60px 45px",
-        width: "300px",
-        height: "420px",
-      },
-    },
-    InfoContainer: {
-      display: "inline-block",
-      width: "30%",
-      margin: "10px auto",
-    },
-    Description: {
-      width: "90%",
-      margin: "10px auto",
       textAlign: "left",
       lineHeight: "25px",
       fontSize: "0.9rem",

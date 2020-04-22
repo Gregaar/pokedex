@@ -1,16 +1,6 @@
 const fetch = require("node-fetch");
 const englishText = require("./get-english-text");
-const urlId = require("./get-url-id");
-
-/**
- * To use this, you'd do something like this:
- *
- * const config = require('config');
- * const createPokemonInfoClient = require('./get-poke-info');
- *
- * const pokemonInfoClient = createPokemonInfoClient(config.get('pokeapi.baseurl'));
- * const info = await pokemonInfoClient('some-id');
- */
+const urlId = require("./get-url-id")
 
 module.exports = (baseUrl) => async (id) => {
   const response = await fetch(`${baseUrl}/pokemon-species/${id}`);

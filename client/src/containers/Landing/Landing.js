@@ -21,7 +21,6 @@ const Landing = () => {
       await axios
         .get(`/images/personalcards?page=${page}&limit=12`)
         .then((res) => {
-          console.log(res)
           return setImageState(updateArray(imageState, res.data.results));
         })
         .catch((error) => {
@@ -63,6 +62,10 @@ const Landing = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const goToBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
   if (imageState) {
     const imagesCopy = [...imageState];
     images = imagesCopy.map((img) => <Image key={img._id} imageId={img.imageId} />);
@@ -74,8 +77,11 @@ const Landing = () => {
     <div className={classes.Landing}>
       <div className={classes.CardGrid}>
         {images}
-        <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
-          ^
+        <button className={sharedStyle.StickyUp} style={{ display: showButton }} onClick={goToTop}>
+          ↑
+        </button>
+        <button className={sharedStyle.StickyDown} style={{ display: showButton }} onClick={goToBottom}>
+          ↓
         </button>
       </div>
     </div>

@@ -30,7 +30,7 @@ const CardList = (props) => {
       return props.history.push("/");
     }
     const pokemonId = await axios
-      .get(`/cardlist?search=${event.target[0].value}`, {
+      .get(`/card?search=${event.target[0].value}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -76,7 +76,6 @@ const CardList = (props) => {
           },
         })
         .then((res) => {
-          console.log(res)
           return setImageState(updateArray(imageState, res.data.results)); ///update object and add in next object
         })
         .catch((error) => {
@@ -109,6 +108,10 @@ const CardList = (props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const goToBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
   return (
     <div className={classes.Container}>
       <div className={classes.CardGrid}>
@@ -117,7 +120,7 @@ const CardList = (props) => {
         </Modal>
         <form onSubmit={(event) => searchCardHandler(event)}>
           <label htmlFor={"search"}>Pokedex Search</label>
-          <input id="search" type="search" placeholder="Search by Pokemon Name" />
+          <input id="search" type="search" placeholder="Search by Name" />
           <Button style={classes.Pokedex} />
         </form>{" "}
         {imageStateCopy
@@ -125,8 +128,11 @@ const CardList = (props) => {
           .map((image) => (
             <Image key={image.pokedexEntry} imageId={image.imageId} clicked={() => goToCard(image.pokedexEntry)} />
           ))}
-        <button className={sharedStyle.Sticky} style={{ display: showButton }} onClick={goToTop}>
-          ^
+        <button className={sharedStyle.StickyUp} style={{ display: showButton }} onClick={goToTop}>
+          ↑
+        </button>
+        <button className={sharedStyle.StickyDown} style={{ display: showButton }} onClick={goToBottom}>
+          ↓
         </button>
       </div>
     </div>

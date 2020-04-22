@@ -10,6 +10,26 @@ const favoritePokemonSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    type: {
+      type: String,
+      required: true,
+    },
+    color: {
+      type: String,
+      required: true,
+    },
+    rate: {
+      type: String,
+      required: true,
+    },
+    habitat: {
+      type: String,
+      required: true,
+    },
+    captureChance: {
+      type: Number,
+      required: true,
+    },
   },
   {
     timestamps: true,
@@ -22,7 +42,6 @@ favoritePokemonSchema.methods.toJSON = function() {
 
   delete FavoriteObject._id;
   delete FavoriteObject.userId;
-  delete FavoriteObject.createdAt;
   delete FavoriteObject.updatedAt;
   delete FavoriteObject.__v;
 
