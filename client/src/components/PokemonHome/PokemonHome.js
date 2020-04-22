@@ -11,7 +11,7 @@ const pokemonhome = (props) => {
         <h1>Welcome to Kanto Cards</h1>
         <p>
           Once logged in, you'll be able to browse the complete collection of original cards, along with some
-          supplmentary information about each Pokemon.
+          supplementary information about each Pokemon.
         </p>
         <p>When you're ready, please feel free to make an account and start your sweet, sweet nostalgia trip!</p>
         <p>Otherwise, enjoy viewing my own card collection below.</p>
