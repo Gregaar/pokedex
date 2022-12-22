@@ -23,8 +23,8 @@
     "node-fetch": "^2.6.0",
     "pino": "^5.16.0",
     "pokedex-promise-v2": "^3.2.0",
-    "jwks-rsa": "^1.7.0",
-    "express-jwt": "^6.0.0"
+    "jwks-rsa": "^3.0.0",
+    "express-jwt": "^8.2.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
